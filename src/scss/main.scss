@@ -1,3 +1,114 @@
-body {
+$gray: #bdbdbd;
+$light_gray: #f5f5f6;
+$extra_light_gray: #f8f8f8;
+$white: #ffffff;
+$blue: #3090bb;
+$dark_blue: #2881a0;
+$red: #e42119;
+$green: #00983a;
+$orange: #f9b233;
 
+@font-face {
+  font-family: 'Conv_regular';
+  src: url('fonts/regular.eot');
+  src: local('☺'), url('fonts/regular.woff') format('woff'), url('fonts/regular.ttf') format('truetype'), url('fonts/regular.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Conv_medium';
+  src: url('fonts/medium.eot');
+  src: local('☺'), url('fonts/medium.woff') format('woff'), url('fonts/medium.ttf') format('truetype'), url('fonts/medium.svg') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Conv_regular', Arial, Helvetica, sans-serif;
+  font-size: 13pt;
+  background-color: $extra_light_gray;
+}
+
+a {
+  font-family: 'Conv_medium', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: $blue;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    color: $blue;
+    text-decoration: underline;
+  }
+  &:active {
+    color: $dark_blue;
+    text-decoration: underline;
+  }
+}
+
+h1, h2 {
+  font-family: 'Conv_medium', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 21pt;
+}
+
+h2 {
+  font-size: 17pt;
+}
+
+.note {
+  color: $gray;
+}
+
+.tag {
+  font-size: 8pt;
+  color: $orange;
+  font-weight: bold;
+}
+
+.header {
+  border-bottom: 1px solid #e5e9eb;
+  box-shadow: 0 1px #f4f4f4;
+  background-color: $white;
+  height: 85px;
+  &__sub {
+    border-bottom: 1px solid #e5e9eb;
+    background-color: $extra_light_gray;
+    box-shadow: 0 1px #f4f4f4;
+    margin-bottom: 1em;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-left: 8em;
+  }
+  &__logo {
+    img {
+      height: 42px;
+      width: auto;
+    }
+    margin-right: 47px;
+  }
+  &__item {
+    margin-right: 56px;
+    &.active {
+      a {
+        color: $red !important;
+      }
+    }
+  }
+  &__link{
+    padding: 0 13px;
+    a{
+      font-size: 14pt;
+    }
+  }
+}
+
+.container-fluid{
+  padding-right: 35px;
+  padding-left: 35px;
 }

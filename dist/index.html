@@ -3,11 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <title>ui-kit</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-TEST
+
+<header>
+    <div class="navbar navbar-light header">
+        <div class="container-fluid d-flex justify-content-between">
+
+            <a class="navbar-brand header__logo" href="#">
+                <img src="img/logo_gorod.svg" alt="">
+            </a>
+
+            <a class="navbar-brand header__logo" href="#">
+                <img src="img/logo_front.svg" alt="">
+            </a>
+
+            <ul class="navbar-nav mr-auto d-flex flex-row header__link">
+                <li class="nav-item header__item">
+                    <a class="" href="#">Главная</a>
+                </li>
+
+                <li class="nav-item header__item active">
+                    <a class="" data-toggle="collapse" data-target="#navbarHeader"
+                       aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation" href="#">Управление</a>
+                </li>
+
+                <li class="nav-item header__item">
+                    <a class="" href="#">Закупки</a>
+                </li>
+                <li class="nav-item header__item">
+                    <a class="disabled" href="#">О проекте</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="collapse header__sub collapse show" id="navbarHeader">
+
+
+                    <ul class="navbar-nav mr-auto d-flex flex-row header__link">
+                        <li class="nav-item header__item">
+                            <a class="" href="#">Пользователи</a>
+                        </li>
+
+                        <li class="nav-item header__item active">
+                            <a class="" href="#">Закупки</a>
+                        </li>
+
+                        <li class="nav-item header__item">
+                            <a class="" href="#">Закупки на модерации</a>
+                        </li>
+                        <li class="nav-item header__item">
+                            <a class="disabled" href="#">Перечни</a>
+                        </li>
+                    </ul>
+
+        </div>
+
+</header>
+
+<main role="main">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6">
+                <h1>Заголовок типа Н1 — Helvetica Neue Medium 21 pt</h1>
+                <h2>Заголовок типа Н2 — Helvetica Neue Medium 17 pt</h2>
+                <p class="note">Дневник тренировок — записи атлетов, позволяющие отслеживать прогрессии в нагрузках,
+                    массе
+                    мышц, коррекции фигуры
+                    фитнес-модели или адаптации, анализировать и составлять более эффективный силовой тренинг с учётом
+                    своей
+                    физиологии
+                    и подготовки — Helvetica Neue 13 pt</p>
+                <a href="#">Ссылка Helvetica Neue Medium 13 pt</a>
+                <p><span class="tag">Текст в теге Helvetica Neue Medium 8 pt</span></p>
+            </div>
+
+        </div>
+    </div>
+</main>
 <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

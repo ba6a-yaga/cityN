@@ -20,10 +20,12 @@ module.exports = {
                 })
             },
             {
-                test: /\.hbs$/,
-                loader: "handlebars-loader",
+                test: /\.(eot|woff|woff2|svg|ttf)([\?]?.*)$/,
+                use: ['raw-loader']
             },
+
         ]
+
     },
     output: {
         filename: './js/main.js',
