@@ -10,16 +10,16 @@ $orange: #f9b233;
 
 @font-face {
   font-family: 'Conv_regular';
-  src: url('fonts/regular.eot');
-  src: local('☺'), url('fonts/regular.woff') format('woff'), url('fonts/regular.ttf') format('truetype'), url('fonts/regular.svg') format('svg');
+  src: url('../fonts/regular.eot');
+  src: local('☺'), url('../fonts/regular.woff') format('woff'), url('../fonts/regular.ttf') format('truetype'), url('../fonts/regular.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Conv_medium';
-  src: url('fonts/medium.eot');
-  src: local('☺'), url('fonts/medium.woff') format('woff'), url('fonts/medium.ttf') format('truetype'), url('fonts/medium.svg') format('svg');
+  src: url('../fonts/medium.eot');
+  src: local('☺'), url('../fonts/medium.woff') format('woff'), url('../fonts/medium.ttf') format('truetype'), url('../fonts/medium.svg') format('svg');
   font-weight: bold;
   font-style: normal;
 }
@@ -100,15 +100,59 @@ h2 {
       }
     }
   }
-  &__link{
+  &__link {
     padding: 0 13px;
-    a{
+    align-items: center;
+    a {
       font-size: 14pt;
+    }
+  }
+  &__dropdown {
+    padding: 0 13px;
+    font-size: 14pt;
+    color: $blue !important;
+    &:hover {
+      color: $blue !important;
+      text-decoration: underline;
+    }
+    &:active {
+      color: $dark_blue !important;
+      text-decoration: underline;
+    }
+    &:after {
+      display: inline-block;
+      margin-left: 5px;
+      height: auto;
+      width: 13px;
+      height: auto;
+      content: url("../img/icons/dropdown.svg");
+    }
+    &__menu {
+      position: absolute !important;
+      border-radius: 0px;
+      width: 100%;
+      &__item {
+        border-bottom: 1px solid #ffffff;
+        border-top: 1px solid #ffffff;
+        &:hover{
+          background-color: #edf6f9;
+          border-bottom: 1px solid #dadada;
+          border-top: 1px solid #dadada;
+        }
+        &:active{
+          color: #000;
+        }
+      }
+    }
+    &__logo{
+      margin-right: 10px;
+      display: inline-block;
+      border-radius: 50%;
     }
   }
 }
 
-.container-fluid{
+.container-fluid {
   padding-right: 35px;
   padding-left: 35px;
 }

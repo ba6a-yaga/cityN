@@ -541,6 +541,7 @@ MigrationBackup/
 !.vscode/launch.json
 !.vscode/extensions.json
 .idea/
+node_modules
 node_modules/.bin/
 node_modules/@webassemblyjs/
 node_modules/@xtuc/
@@ -856,3 +857,6 @@ node_modules/yallist/
 node_modules/yargs-parser/
 node_modules/yargs/
 /.gitignore
+/src/scss/img/
+src/scss/img/icons/
+/src/scss/fonts/
