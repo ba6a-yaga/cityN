@@ -96,9 +96,9 @@
                     <img src="img/logo/z4z_white.svg" alt="">
                 </a>
                 <div class="footer__link">
-                        <a href="#">О проекте</a>
-                        <a href="#">Закупки</a>
-                        <a href="#">Контакты</a>
+                    <a href="#">О проекте</a>
+                    <a href="#">Закупки</a>
+                    <a href="#">Контакты</a>
                 </div>
                 <p>119285, г. Москва, ул. Мосфильмовская, д. 40</p>
                 <p class="footer__sub_txt">© 2019, Проект ОНФ «За честные закупки»</p>
@@ -129,10 +129,10 @@
                 <p>z4z@onf.ru</p>
                 <p class="footer__sub_txt">По вопросам работы сайта</p>
                 <button type="button" class="btn btn-main">Добавить закупку</button>
-             <div class="footer__logo">
-                 Дизайн &mdash;<a href="#" class="footer__logo_1">Студия &#171;Бермуды&#187;</a>
-                 Разработка &mdash;<a href="#" class="footer__logo_2">Solorum Group</a>
-             </div>
+                <div class="footer__logo">
+                    Дизайн &mdash;<a href="#" class="footer__logo_1">Студия &#171;Бермуды&#187;</a>
+                    Разработка &mdash;<a href="#" class="footer__logo_2">Solorum Group</a>
+                </div>
             </div>
         </div>
     </div>
@@ -154,11 +154,70 @@
                 <p><span class="tag">Текст в теге Helvetica Neue Medium 8 pt</span></p>
             </div>
         </div>
-        <div class="row">
-                <button type="button" class="btn btn-main mr-5">Войти</button>
-                <button type="button" class="btn btn-second mr-5">Отклонить</button>
-                <button type="button" class="btn btn-third mr-5">Отмена</button>
-                <button type="button" class="btn btn-main mr-5 btn-disabled" disabled>Войти</button>
+        <div class="row ">
+            <button type="button" class="btn btn-main mr-5">Войти</button>
+            <button type="button" class="btn btn-second mr-5">Отклонить</button>
+            <button type="button" class="btn btn-third mr-5">Отмена</button>
+            <button type="button" class="btn btn-third mr-5 btn-disabled" disabled>Отмена</button>
+            <button type="button" class="btn btn-main mr-5 btn-disabled" disabled>Войти</button>
+        </div>
+        <div class="row mt-3">
+            <button type="button" class="btn btn-main btn-small btn-size mr-2"></button>
+            <button type="button" class="btn btn-main btn-small btn-send mr-2"></button>
+            <button type="button" class="btn btn-main btn-small btn-close mr-2"></button>
+        </div>
+        <div class="row mt-3">
+            <div class="tab">
+                <a class="tab-link active">М</a>
+                <a class="tab-link ">Ж</a>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <a class="popup_link" href="#">
+                <img src="img/icons/external_link.svg" alt="">
+            </a>
+        </div>
+        <div class="row mt-3">
+            <div class="photo-load">
+                <p>Вы можете добавить фото объемом максимум 5 Мб. в формате .jpg или .png</p>
+                <a class="mt-1" href="#">Загрузить фото</a>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="input_form">
+                <span id="txt" class="label">Введите текст</span>
+                <input id="inputTxt" type="text" value="" onchange="txtInput('txt','inputTxt')">
+            </div>
+            <div class="input_form ml-4">
+                <span id="txtAlert" class="error label">Электронная почта</span>
+                <input id="inputTxtAlert" type="email" value="solomatin123" onchange="txtInput('txtAlert','inputTxtAlert')">
+                <span class="sub_txt error">Текстовое предупреждение об ошибке ввода</span>
+            </div>
+            <div class="input_form ml-4">
+                <span class="see" onclick="if(this.classList.contains('see')){
+                    this.classList.add('hide');
+                    this.classList.remove('see');
+                    document.getElementById('inputTxtPass').type = 'text';
+                }else{
+                    this.classList.add('see');
+                    this.classList.remove('hide');
+                    document.getElementById('inputTxtPass').type = 'password';
+                }"></span>
+                <span id="txtPass" class="label">Введите пароль</span>
+                <input class="" id="inputTxtPass" type="password" value="" onchange="txtInput('txtPass','inputTxtPass')">
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="input_form mr-4">
+                <span class="calendar"></span>
+                <span id="txtCalendar" class="label">Введите дату</span>
+                <input id="txtInputCalendar" type="text">
+                <span class="sub_txt">Текстовaя подсказка для формы ввода</span>
+            </div>
+            <div class="input_form disable">
+                <span class="label">Неактивная форма ввода</span>
+                <input type="text" value="" disabled>
+            </div>
         </div>
     </div>
 </main>
@@ -169,6 +228,20 @@
 <br>
 <br>
 <br>
-<script type="text/javascript" src="js/scripts.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", txtInput('txt','inputTxt'));
+    document.addEventListener("DOMContentLoaded", txtInput('txtAlert','inputTxtAlert'));
+
+    function txtInput(label,input) {
+        var de = document.getElementById(label);
+        var el = document.getElementById(input);
+        if (el !== null && el.value === "") {
+            de.classList.remove("full");
+        } else {
+            de.classList.add("full");
+        }
+    }
+
+</script>
 </body>
 </html>
