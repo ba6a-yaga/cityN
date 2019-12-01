@@ -91,13 +91,65 @@ h2 {
   padding: 1rem 4rem;
   font-size: 14pt;
   transition-duration: 300ms;
-  &:hover{
+  box-shadow: 0px 7px 15px 0px rgba(227, 33, 24, .3);
+  &:hover {
     background-color: $dark_red;
     color: #fff;
     transition-duration: 300ms;
+    border-color: $red;
+  }
+  &:focus {
+    box-shadow: 0px 7px 15px 0px rgba(227, 33, 24, .3);
   }
 }
 
+.btn-second {
+  background-color: #f5f5f7;
+  border-color: #dadada;
+  color: $blue;
+  border-radius: 8em;
+  padding: 1rem 4rem;
+  font-size: 14pt;
+  box-shadow: none;
+  &:hover {
+    background-color: #e3e3e5;
+    color: $blue;
+    box-shadow: none;
+  }
+  &:active {
+    border-color: transparent;
+
+  }
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.btn-third {
+  color: $blue;
+  box-shadow: none;
+  &:hover {
+    color: $blue;
+    box-shadow: none;
+    text-decoration: underline;
+  }
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.btn-disabled {
+  background-color: #f5f5f7;
+  color: #bdbdbd;
+  border: 1px solid #dadada;
+  box-shadow: none;
+  &:hover{
+    background-color: #f5f5f7;
+    color: #bdbdbd;
+    border: 1px solid #dadada;
+    box-shadow: none;
+  }
+}
 .header {
   border-bottom: 1px solid #e5e9eb;
   box-shadow: 0 1px #f4f4f4;
@@ -258,34 +310,34 @@ h2 {
       font-size: 15pt;
       margin-bottom: 1rem;
     }
-    .btn-main{
+    .btn-main {
       margin-top: 56px;
       margin-bottom: 100px;
       box-shadow: none;
     }
   }
-  &__logo{
+  &__logo {
     color: #949391;
     font-size: 11pt;
-    a{
+    a {
       color: #fff;
       padding-left: 30px;
       position: relative;
       margin-left: 8px;
       margin-right: 30px;
-      &:before{
+      &:before {
         width: 25px;
         height: 15px;
         position: absolute;
         left: 0;
       }
     }
-    &_1{
-      &:before{
-      content: url("../img/logo/bermudas.svg");
+    &_1 {
+      &:before {
+        content: url("../img/logo/bermudas.svg");
       }
     }
-    &_2{
+    &_2 {
       &:before {
         content: url("../img/logo/solorum.svg");
         top: -5px;

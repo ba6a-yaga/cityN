@@ -64,11 +64,53 @@ h2 {
   border-radius: 8em;
   padding: 1rem 4rem;
   font-size: 14pt;
-  transition-duration: 300ms; }
+  transition-duration: 300ms;
+  box-shadow: 0px 7px 15px 0px rgba(227, 33, 24, 0.3); }
   .btn-main:hover {
     background-color: #cf1314;
     color: #fff;
-    transition-duration: 300ms; }
+    transition-duration: 300ms;
+    border-color: #e32118; }
+  .btn-main:focus {
+    box-shadow: 0px 7px 15px 0px rgba(227, 33, 24, 0.3); }
+
+.btn-second {
+  background-color: #f5f5f7;
+  border-color: #dadada;
+  color: #3090bb;
+  border-radius: 8em;
+  padding: 1rem 4rem;
+  font-size: 14pt;
+  box-shadow: none; }
+  .btn-second:hover {
+    background-color: #e3e3e5;
+    color: #3090bb;
+    box-shadow: none; }
+  .btn-second:active {
+    border-color: transparent; }
+  .btn-second:focus {
+    box-shadow: none; }
+
+.btn-third {
+  color: #3090bb;
+  box-shadow: none; }
+  .btn-third:hover {
+    color: #3090bb;
+    box-shadow: none;
+    text-decoration: underline; }
+  .btn-third:focus {
+    box-shadow: none; }
+
+.btn-disabled {
+  background-color: #f5f5f7;
+  color: #bdbdbd;
+  border: 1px solid #dadada;
+  box-shadow: none; }
+  .btn-disabled:hover {
+    background-color: #f5f5f7;
+    color: #bdbdbd;
+    border: 1px solid #dadada;
+    box-shadow: none; }
 
 .header {
   border-bottom: 1px solid #e5e9eb;
