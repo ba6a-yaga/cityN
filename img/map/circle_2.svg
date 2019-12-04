@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#E42119;}
+	.st2{fill:#BDBDBD;}
+</style>
+<g>
+	<g>
+		<g>
+			<path class="st0" d="M17.5,32.5c-8.3,0-15-6.7-15-15s6.7-15,15-15s15,6.7,15,15S25.8,32.5,17.5,32.5z"/>
+			<path class="st1" d="M17.5,5C24.4,5,30,10.6,30,17.5S24.4,30,17.5,30S5,24.4,5,17.5S10.6,5,17.5,5 M17.5,0C7.8,0,0,7.8,0,17.5
+				S7.8,35,17.5,35S35,27.2,35,17.5S27.2,0,17.5,0L17.5,0z"/>
+		</g>
+	</g>
+	<path class="st2" d="M17.5,0v5C24.4,5,30,10.6,30,17.5S24.4,30,17.5,30v5C27.2,35,35,27.2,35,17.5S27.2,0,17.5,0z"/>
+</g>
+</svg>
