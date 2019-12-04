@@ -1,6 +1,5 @@
 .input_form {
   position: relative;
-  width: 440px;
   margin: 5px 10px;
   input {
     border: 1px solid #dadada;
@@ -207,6 +206,10 @@
   }
   &:last-child {
     margin-right: 0;
+  }
+  .input_form{
+    max-width: 440px;
+    width: 100%;
   }
 }
 
