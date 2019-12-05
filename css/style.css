@@ -15,6 +15,7 @@
     transition-duration: 300ms; }
     .input_form input:focus, .input_form textarea:focus {
       border: 1px solid #3bb6e6;
+      outline: none;
       transition-duration: 300ms; }
     .input_form input:invalid, .input_form textarea:invalid {
       border: 1px solid #e32118;
@@ -309,7 +310,7 @@
 .footer {
   color: #ffffff;
   background-color: #282423;
-  padding: 50px 0 95px 0; }
+  padding: 50px 0 75px 0; }
   .footer hr {
     background-color: #ffffff;
     margin: 35px 0; }
@@ -343,11 +344,15 @@
         transform: scale(1.1);
         transition-duration: 300ms; }
   .footer__block_1 {
-    padding: 0px 25px;
+    padding: 0px 20px 25px 0;
     max-width: 610px;
     width: 100%;
     font-size: 10pt;
-    margin-right: 105px; }
+    margin-right: 130px; }
+    @media (max-width: 576px) {
+      .footer__block_1 {
+        margin-right: 0px;
+        padding: 0px 20px 25px 20px; } }
     .footer__block_1__footer {
       display: flex;
       justify-content: start; }
@@ -355,7 +360,7 @@
       margin-bottom: 10px; }
   .footer__block_2 {
     font-size: 10pt;
-    padding: 0 25px;
+    padding: 0px;
     flex: 1; }
     .footer__block_2 p {
       margin: 0 0 5px 0; }
@@ -395,6 +400,52 @@
   font-size: 12pt;
   position: relative;
   flex: 1; }
+  .card__registration {
+    max-width: 350px;
+    margin: 0 auto; }
+    .card__registration__content {
+      padding: 30px 30px;
+      text-align: center; }
+      .card__registration__content .personal {
+        color: #bdbdbd;
+        font-size: 10pt;
+        padding: 8px 26px;
+        margin: 0; }
+      .card__registration__content .input_form {
+        margin-bottom: 12px; }
+    .card__registration button {
+      padding: 10px 26px;
+      margin: 10px 0; }
+    .card__registration__header {
+      font-weight: bold;
+      width: 100%;
+      border-bottom: 1px solid #dadada;
+      font-size: 11pt;
+      display: flex;
+      flex-direction: column; }
+    .card__registration__tab {
+      display: flex;
+      flex-direction: row;
+      justify-content: center; }
+      .card__registration__tab .button {
+        padding: 15px 5px;
+        margin: 0 30px;
+        border-bottom: 4px solid transparent;
+        font-size: 11pt;
+        cursor: pointer;
+        display: inline-flex; }
+        .card__registration__tab .button.active {
+          border-color: #e32118; }
+    .card__registration__logo {
+      padding: 45px 0 30px 0;
+      display: flex;
+      justify-content: center; }
+      .card__registration__logo img {
+        width: auto;
+        height: 42px;
+        margin-right: 45px; }
+        .card__registration__logo img:last-child {
+          margin: 0; }
   .card__button {
     display: flex;
     flex-direction: row;

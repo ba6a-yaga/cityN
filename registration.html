@@ -89,17 +89,32 @@
 <main role="main">
     <div class="container">
         <div class="row">
-            <div class="col-12">
-                <h1>Заголовок типа Н1 — Helvetica Neue Medium 21 pt</h1>
-                <h2>Заголовок типа Н2 — Helvetica Neue Medium 17 pt</h2>
-                <h3>Заголовок типа Н3 — Helvetica Neue Medium 15 pt</h3>
-                <p>Дневник тренировок — записи атлетов, позволяющие отслеживать прогрессии в нагрузках,
-                    массе мышц, коррекции фигуры фитнес-модели или адаптации, анализировать и составлять более
-                    эффективный силовой тренинг с учётом своей физиологии и подготовки — Helvetica Neue 13 pt</p>
-                <p class="note">Ведение дневника — показатель серьёзного отношения спортсмена к достижению цели.
-                    Helvetica Neue 13 pt</p>
-                <a href="#">Ссылка Helvetica Neue Medium 13 pt</a>
-                <p><span class="tag">Текст в теге Helvetica Neue Medium 8 pt</span></p>
+            <div class="card card__registration">
+                <div class="card__registration__header">
+                    <div class="card__registration__logo">
+                        <img src="img/logo/cityN.svg" alt="">
+                        <img src="img/logo/z4z.svg" alt="">
+                    </div>
+                    <div class="card__registration__tab">
+                        <div class="button">Вход</div>
+                        <div class="button active">Регистрация</div>
+                    </div>
+                </div>
+                <div class="card__registration__content">
+                        <span class="input_form error">
+                        <span id="txtAlert" class="label full">Электронная почта</span>
+                        <input id="inputTxtAlert" type="email" value="solomatin123">
+                        <span class="sub_txt"style="display: none">Текстовое предупреждение об ошибке ввода</span>
+                    </span>
+                    <span class="input_form">
+                        <span class="see"></span>
+                        <span id="txtPass" class="label">Введите пароль</span>
+                        <input class="" id="inputTxtPass" type="password" value="">
+                        <span class="sub_txt">&emsp;</span>
+                    </span>
+                    <button type="button" class="btn btn-main">Зарегистрироваться</button>
+                    <p class="personal">Нажимая кнопку, вы подтверждаете <a href="#">согласие на обработку</a><br> ваших персональных данных.</p>
+                </div>
             </div>
         </div>
     </div>

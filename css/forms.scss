@@ -14,6 +14,7 @@
     transition-duration: 300ms;
     &:focus {
       border: 1px solid #3bb6e6;
+      outline: none;
       transition-duration: 300ms;
     }
     &:invalid {
