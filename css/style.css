@@ -956,11 +956,23 @@
   src: local("тШ║"), url("../fonts/medium.woff") format("woff"), url("../fonts/medium.ttf") format("truetype"), url("../fonts/medium.svg") format("svg");
   font-weight: bold;
   font-style: normal; }
+html, body {
+  height: 100%; }
+
+main {
+  padding: 30px 0; }
+
 body {
   font-family: 'Conv_regular', Arial, Helvetica, sans-serif;
   font-size: 10pt;
   background-color: #f8f8f8;
-  line-height: 1.1; }
+  line-height: 1.1;
+  display: flex;
+  justify-content: start;
+  flex-direction: column; }
+
+footer {
+  margin-top: auto; }
 
 a {
   font-family: 'Conv_medium', Arial, Helvetica, sans-serif;

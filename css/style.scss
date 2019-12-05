@@ -31,12 +31,23 @@ $dark_brown: #282423;
   font-weight: bold;
   font-style: normal;
 }
-
+html,body{
+  height: 100%;
+}
+main{
+  padding:30px 0;
+}
 body {
   font-family: 'Conv_regular', Arial, Helvetica, sans-serif;
   font-size: 10pt;
   background-color: $extra_light_gray;
   line-height: 1.1;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+}
+footer{
+  margin-top: auto;
 }
 
 a {
