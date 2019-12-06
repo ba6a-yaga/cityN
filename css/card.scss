@@ -123,7 +123,6 @@
       display: flex;
       justify-content: space-between;
       flex-direction: column;
-      cursor: pointer;
       &:last-child {
         .card__list__item__header {
           border: none;
@@ -138,6 +137,7 @@
         font-weight: bold;
         border-bottom: 1px solid #dadada;
         padding: 22px 5px 27px 27px;
+        cursor: pointer;
       }
       .arrow {
         content: url("../img/icons/dropdown.svg");

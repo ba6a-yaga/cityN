@@ -364,18 +364,8 @@
                     </div>
                     <div class="card__list__item__content"></div>
                 </div>
-                <div id="opens" class="card__list__item" onclick="
-                 var el = this.getElementsByClassName('card__list__item__content');
-                 var g = el[0].getElementsByClassName('card__list__item__block');
-                if (this.classList.contains('active')){
-                 this.classList.remove('active');
-                 el[0].setAttribute('style', 'height:0');
-                } else{
-                   this.classList.add('active');
-                el[0].setAttribute('style', 'height:' + g[0].offsetHeight + 'px');
-                }
-                ">
-                    <div class="card__list__item__header">
+                <div id="opens" class="card__list__item">
+                    <div class="card__list__item__header" onclick="Dropdown('opens')">
                         <span>Завышение стоймости</span>
                         <span class="arrow"></span>
                     </div>
@@ -475,18 +465,8 @@
                     </div>
                     <div class="card__list__item__content"></div>
                 </div>
-                <div id="opens2" class="card__list__item" onclick="
-                 var el = this.getElementsByClassName('card__list__item__content');
-                 var g = el[0].getElementsByClassName('card__list__item__block');
-                if (this.classList.contains('active')){
-                 this.classList.remove('active');
-                 el[0].setAttribute('style', 'height:0');
-                } else{
-                   this.classList.add('active');
-                el[0].setAttribute('style', 'height:' + g[0].offsetHeight + 'px');
-                }
-                ">
-                    <div class="card__list__item__header">
+                <div id="opens2" class="card__list__item">
+                    <div class="card__list__item__header" onclick="Dropdown('opens2')">
                         <span>Завышение стоимости</span>
                         <span class="arrow"></span>
                     </div>
@@ -746,7 +726,8 @@
                     <!--Тут должна быть карта со строго фиксироваными размерами-->
                     <div class="button_container">
                         <button type="button" class="btn btn-second mt-auto bottom_button mark_button"></button>
-                        <button type="button" class="btn btn-second mt-auto bottom_button mark_button__save">Сохранить</button>
+                        <button type="button" class="btn btn-second mt-auto bottom_button mark_button__save">Сохранить
+                        </button>
                     </div>
                 </div>
             </div>
@@ -806,6 +787,19 @@
 
 <script>
 
+    function Dropdown(obj) {
+        var d = document.getElementById(obj);
+        var el = d.getElementsByClassName('card__list__item__content');
+        var g = el[0].getElementsByClassName('card__list__item__block');
+        if (d.classList.contains('active')) {
+            d.classList.remove('active');
+            el[0].setAttribute('style', 'height:0');
+        } else {
+            d.classList.add('active');
+            el[0].setAttribute('style', 'height:' + g[0].offsetHeight + 'px');
+        }
+    }
+
     function txtInput(label, input) {
         var de = document.getElementById(label);
         var el = document.getElementById(input);
@@ -845,29 +839,9 @@
     document.addEventListener("DOMContentLoaded", txtInput('txt4', 'inputTxt4'));
     document.addEventListener("DOMContentLoaded", txtInput('txtAlert', 'inputTxtAlert'));
     document.addEventListener("DOMContentLoaded", txtInput('txtCalendar', 'txtInputCalendar'));
-    document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", Dropdown('opens'));
+    document.addEventListener("DOMContentLoaded", Dropdown('opens2'));
 
-        var d = document.getElementById('opens');
-        var el = d.getElementsByClassName('card__list__item__content');
-        var g = el[0].getElementsByClassName('card__list__item__block');
-        if (d.classList.contains('active')) {
-            d.classList.remove('active');
-            el[0].setAttribute('style', 'height:0');
-        } else {
-            d.classList.add('active');
-            el[0].setAttribute('style', 'height:' + g[0].offsetHeight + 'px');
-        }
-        var d = document.getElementById('opens2');
-        var el = d.getElementsByClassName('card__list__item__content');
-        var g = el[0].getElementsByClassName('card__list__item__block');
-        if (d.classList.contains('active')) {
-            d.classList.remove('active');
-            el[0].setAttribute('style', 'height:0');
-        } else {
-            d.classList.add('active');
-            el[0].setAttribute('style', 'height:' + g[0].offsetHeight + 'px');
-        }
-    });
 
 
 </script>

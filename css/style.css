@@ -528,8 +528,7 @@
     .card__list__item {
       display: flex;
       justify-content: space-between;
-      flex-direction: column;
-      cursor: pointer; }
+      flex-direction: column; }
       .card__list__item:last-child .card__list__item__header {
         border: none; }
       .card__list__item__header {
@@ -540,7 +539,8 @@
         align-items: center;
         font-weight: bold;
         border-bottom: 1px solid #dadada;
-        padding: 22px 5px 27px 27px; }
+        padding: 22px 5px 27px 27px;
+        cursor: pointer; }
       .card__list__item .arrow {
         content: url("../img/icons/dropdown.svg");
         display: inline-block;
