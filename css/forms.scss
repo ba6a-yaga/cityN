@@ -78,13 +78,7 @@
       width: 25px;
       height: 25px;
       content: "";
-      mask: url("../img/icons/eye.svg");
-      -webkit-mask: url("../img/icons/eye.svg");
-      mask-size: contain;
-      -webkit-mask-size: contain;
-      mask-repeat: no-repeat;
-      -webkit-mask-repeat: no-repeat;
-      background-color: $gray;
+      @include eye(bdbdbd);
       display: inline-block;
     }
   }
@@ -97,13 +91,7 @@
       width: 25px;
       height: 25px;
       content: "";
-      mask: url("../img/icons/no_eye.svg");
-      -webkit-mask: ("../img/icons/no_eye.svg");
-      mask-size: contain;
-      -webkit-mask-size: contain;
-      mask-repeat: no-repeat;
-      -webkit-mask-repeat: no-repeat;
-      background-color: $gray;
+      @include no_eye(bdbdbd);
       display: inline-block;
     }
   }
@@ -116,13 +104,7 @@
       width: 20px;
       height: 20px;
       content: "";
-      mask: url("../img/icons/calendar.svg");
-      -webkit-mask: url("../img/icons/calendar.svg");
-      mask-size: contain;
-      -webkit-mask-size: contain;
-      mask-repeat: no-repeat;
-      -webkit-mask-repeat: no-repeat;
-      background-color: $gray;
+      @include calendar(bdbdbd);
       display: inline-block;
     }
   }
@@ -155,13 +137,7 @@
 
   &:after {
     content: "";
-    mask: url("../img/icons/dropdown.svg");
-    -webkit-mask: url("../img/icons/dropdown.svg");
-    mask-size: contain;
-    -webkit-mask-size: contain;
-    mask-repeat: no-repeat;
-    -webkit-mask-repeat: no-repeat;
-    background-color: $gray;
+    @include dropdown(bdbdbd);
     display: block;
     right: 22px;
     top: 25px;
@@ -292,13 +268,7 @@
       width: 12px;
       height: 10px;
       content: "";
-      mask: url("../img/icons/check.svg");
-      -webkit-mask: url("../img/icons/check.svg");
-      mask-size: contain;
-      -webkit-mask-size: contain;
-      mask-repeat: no-repeat;
-      -webkit-mask-repeat: no-repeat;
-      background-color: $red;
+      @include check(e32118);
     }
   }
 }
