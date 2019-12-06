@@ -30,7 +30,7 @@
                 <img src="img/logo/z4z.svg" alt="">
             </a>
 
-            <ul class="navbar-nav mr-auto d-flex flex-row header__link">
+            <ul class="navbar-nav mr-auto flex-row header__link d-none d-md-flex">
                 <li class="nav-item header__item">
                     <a class="" href="#">Главная</a>
                 </li>
@@ -47,12 +47,13 @@
                     <a class="disabled" href="#">О проекте</a>
                 </li>
             </ul>
+
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item dropdown header__dropdown__container">
                     <a class="nav-link header__dropdown d-flex align-items-center" href="#" id="dropdown01"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <img class="header__dropdown__logo" src="https://picsum.photos/50/50" alt="">
-                        Михаил Соломатин</a>
+                        <span class="d-none d-sm-block">Михаил Соломатин</span></a>
                     <div class="dropdown-menu header__dropdown__menu" aria-labelledby="dropdown01">
                         <a class="dropdown-item header__dropdown__menu__item" href="#">Категория 1</a>
                         <a class="dropdown-item header__dropdown__menu__item" href="#">Категория 2</a>
@@ -61,12 +62,33 @@
                     </div>
                 </li>
             </ul>
+
         </div>
     </div>
+    <div class="navbar navbar-light header d-block d-md-none">
+    <div class="header__container ">
+        <ul class="navbar-nav flex-row header__link d-flex">
+            <li class="nav-item header__item">
+                <a class="" href="#">Главная</a>
+            </li>
 
+            <li class="nav-item header__item active">
+                <a class="" data-toggle="collapse" data-target="#navbarHeader"
+                   aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation" href="#">Управление</a>
+            </li>
+
+            <li class="nav-item header__item">
+                <a class="" href="#">Закупки</a>
+            </li>
+            <li class="nav-item header__item">
+                <a class="disabled" href="#">О проекте</a>
+            </li>
+        </ul>
+    </div>
+    </div>
     <div class="collapse header__sub collapse show" id="navbarHeader">
         <div class="container">
-            <ul class="navbar-nav mr-auto d-flex flex-row header__link">
+            <ul class="navbar-nav d-flex flex-row header__link">
                 <li class="nav-item header__item">
                     <a class="" href="#">Пользователи</a>
                 </li>

@@ -5,6 +5,9 @@
   height: 55px;
   padding: 0;
   &__container {
+    @media(max-width: 776px) {
+      padding: 0 15px;
+    }
     padding-right: 25px;
     padding-left: 30px;
     display: flex;
@@ -36,6 +39,7 @@
   }
   &__item {
     margin-right: 33px;
+    white-space: nowrap;
     &.active {
       a {
         color: $red !important;
@@ -45,6 +49,12 @@
   &__link {
     padding: 0 8px;
     align-items: center;
+    @media(max-width: 776px) {
+      padding: 0;
+      justify-content: center;
+      width: 100%;
+      overflow: auto;
+    }
     a {
       font-size: 10pt;
     }
@@ -59,7 +69,7 @@
       align-content: center;
       display: flex;
       padding-right: 13px;
-      a{
+      a {
         font-size: 10pt;
       }
     }
@@ -76,10 +86,13 @@
     &:after {
       display: inline-block;
       margin-left: 5px;
-      height: auto;
+      height: 8px;
       width: 13px;
-      height: auto;
-      content: url("../img/icons/dropdown.svg");
+      content: "";
+      mask: url("../img/icons/dropdown.svg");
+      mask-repeat: no-repeat;
+      mask-size: contain;
+      background-color: $gray;
     }
     &__menu {
       position: absolute !important;

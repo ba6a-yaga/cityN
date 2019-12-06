@@ -7,7 +7,7 @@
     &__content {
       padding: 30px 30px;
       text-align: center;
-      .personal{
+      .personal {
         color: $gray;
         font-size: 10pt;
         padding: 8px 26px;
@@ -205,6 +205,7 @@
               height: 100%;
               width: auto;
               border-radius: 10px;
+              cursor: pointer;
             }
             &:first-child {
               margin: 0;
@@ -213,9 +214,14 @@
           .video {
             &:after {
               position: absolute;
-              content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 23.50112 16.95996'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23ffffff; %7D %3C/style%3E%3C/defs%3E%3Ctitle%3Evideo%3C/title%3E%3Cg id='Слой_2' data-name='Слой 2'%3E%3Cg id='UI-kit'%3E%3Cg id='Body'%3E%3Cpath class='cls-1' d='M23.02883,3.03711c-.00293-.0166-.00683-.0332-.01074-.04981A3.54661,3.54661,0,0,0,20.52883.44141C18.771.0127,12.46438,0,11.75051,0S4.72121.01367,2.9468.48828A3.55472,3.55472,0,0,0,.47219,3.07715a29.818,29.818,0,0,0-.47168,5.418,29.78984,29.78984,0,0,0,.48828,5.541,3.55505,3.55505,0,0,0,2.46875,2.43848c1.76367.47168,8.0791.48535,8.793.48535s7.0293-.01367,8.80469-.48828a3.55673,3.55673,0,0,0,2.47363-2.58887,29.73087,29.73087,0,0,0,.47168-5.37793A29.7718,29.7718,0,0,0,23.02883,3.03711ZM21.563,13.56738a2.03145,2.03145,0,0,1-1.40527,1.458,61.36327,61.36327,0,0,1-8.40723.43457,61.40581,61.40581,0,0,1-8.40137-.43359,2.028,2.028,0,0,1-1.40039-1.3291,28.37976,28.37976,0,0,1-.44824-5.20118A28.36545,28.36545,0,0,1,1.938,3.39258a2.03271,2.03271,0,0,1,1.40625-1.458A61.34848,61.34848,0,0,1,11.75051,1.5a67.8148,67.8148,0,0,1,8.39649.3916,2.0333,2.0333,0,0,1,1.41015,1.43848,28.22739,28.22739,0,0,1,.44336,5.17285A28.304,28.304,0,0,1,21.563,13.56738Zm-5.9414-5.71972-5.75-3.27051a.75047.75047,0,0,0-1.1211.65234v6.54a.75083.75083,0,0,0,1.1211.65235l5.75-3.26954a.751.751,0,0,0,0-1.30468Zm-5.3711,2.63281V6.51855L13.73293,8.5Z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");;
+              content: "";
+              mask: url("../img/icons/video.svg");
+              mask-size: contain;
+              mask-repeat: no-repeat;
+              background-color: #ffffff;
+              display: inline-block;
               width: 18px;
-              height: auto;
+              height: 18px;
               left: 11px;
               top: 14px;
             }
@@ -226,6 +232,7 @@
           display: flex;
           justify-content: start;
           align-items: center;
+
           .btn-small {
             align-self: center;
           }
@@ -242,25 +249,42 @@
             right: 20px;
 
             span {
-              height: auto;
               cursor: pointer;
               display: inline-block;
-              margin-right: 5px;
-              &:last-child {
-                margin: 0;
-              }
             }
             .video {
+              position: absolute;
+              top: 10px;
+              right: 10px;
               width: 20px;
-              content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 23.50112 16.95996'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %233090bb; %7D %3C/style%3E%3C/defs%3E%3Ctitle%3Evideo%3C/title%3E%3Cg id='Слой_2' data-name='Слой 2'%3E%3Cg id='UI-kit'%3E%3Cg id='Body'%3E%3Cpath class='cls-1' d='M23.02883,3.03711c-.00293-.0166-.00683-.0332-.01074-.04981A3.54661,3.54661,0,0,0,20.52883.44141C18.771.0127,12.46438,0,11.75051,0S4.72121.01367,2.9468.48828A3.55472,3.55472,0,0,0,.47219,3.07715a29.818,29.818,0,0,0-.47168,5.418,29.78984,29.78984,0,0,0,.48828,5.541,3.55505,3.55505,0,0,0,2.46875,2.43848c1.76367.47168,8.0791.48535,8.793.48535s7.0293-.01367,8.80469-.48828a3.55673,3.55673,0,0,0,2.47363-2.58887,29.73087,29.73087,0,0,0,.47168-5.37793A29.7718,29.7718,0,0,0,23.02883,3.03711ZM21.563,13.56738a2.03145,2.03145,0,0,1-1.40527,1.458,61.36327,61.36327,0,0,1-8.40723.43457,61.40581,61.40581,0,0,1-8.40137-.43359,2.028,2.028,0,0,1-1.40039-1.3291,28.37976,28.37976,0,0,1-.44824-5.20118A28.36545,28.36545,0,0,1,1.938,3.39258a2.03271,2.03271,0,0,1,1.40625-1.458A61.34848,61.34848,0,0,1,11.75051,1.5a67.8148,67.8148,0,0,1,8.39649.3916,2.0333,2.0333,0,0,1,1.41015,1.43848,28.22739,28.22739,0,0,1,.44336,5.17285A28.304,28.304,0,0,1,21.563,13.56738Zm-5.9414-5.71972-5.75-3.27051a.75047.75047,0,0,0-1.1211.65234v6.54a.75083.75083,0,0,0,1.1211.65235l5.75-3.26954a.751.751,0,0,0,0-1.30468Zm-5.3711,2.63281V6.51855L13.73293,8.5Z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");;
-            }
-            .edit {
-              width: 20px;
-              content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 21.62109 21.62'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %233090bb; %7D %3C/style%3E%3C/defs%3E%3Ctitle%3Eedit%3C/title%3E%3Cg id='Слой_2' data-name='Слой 2'%3E%3Cg id='UI-kit'%3E%3Cg id='Body'%3E%3Cpath class='cls-1' d='M19.5,11.87v7a2.7528,2.7528,0,0,1-2.75,2.75h-14A2.7528,2.7528,0,0,1,0,18.87v-14A2.75279,2.75279,0,0,1,2.75,2.12h7a.75.75,0,0,1,0,1.5h-7A1.25116,1.25116,0,0,0,1.5,4.87v14a1.25116,1.25116,0,0,0,1.25,1.25h14A1.25116,1.25116,0,0,0,18,18.87v-7a.75.75,0,1,1,1.5,0Zm2.12109-9a2.85193,2.85193,0,0,1-.84082,2.03027l-9.5,9.5a.75439.75439,0,0,1-.34863.19726l-4,1A.76443.76443,0,0,1,6.75,15.62a.75.75,0,0,1-.72754-.93165l1-4a.75437.75437,0,0,1,.19727-.34863l9.5-9.5A2.87109,2.87109,0,0,1,21.62109,2.87Zm-1.5,0a1.37109,1.37109,0,0,0-2.34082-.96973L8.42676,11.25378l-.64551,2.585,2.585-.64551,9.35352-9.35352A1.36285,1.36285,0,0,0,20.12109,2.87Z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");;
+              height: 20px;
+              content: "";
+              mask: url("../img/icons/video.svg");
+              mask-size: contain;
+              mask-repeat: no-repeat;
+              background-color: $blue;
+              transition-duration: 300ms;
+              &:hover {
+                transform: scale(1.1);
+                transition-duration: 300ms;
+              }
             }
             .images {
+              position: absolute;
+              top: 10px;
+              right: 45px;
               width: 15px;
-              content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 19.5 19.5'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %233090bb; %7D %3C/style%3E%3C/defs%3E%3Ctitle%3Eimage%3C/title%3E%3Cg id='Слой_2' data-name='Слой 2'%3E%3Cg id='UI-kit'%3E%3Cg id='Body'%3E%3Cpath class='cls-1' d='M16.75,0h-14A2.7528,2.7528,0,0,0,0,2.75v14A2.7528,2.7528,0,0,0,2.75,19.5h14a2.7528,2.7528,0,0,0,2.75-2.75v-14A2.7528,2.7528,0,0,0,16.75,0ZM1.5,16.75v-14A1.25116,1.25116,0,0,1,2.75,1.5h14A1.25116,1.25116,0,0,1,18,2.75v8.18945L14.28027,7.21973a.74972.74972,0,0,0-1.06054,0l-10.728,10.728A1.23344,1.23344,0,0,1,1.5,16.75ZM16.75,18H4.56055L13.75,8.81055l4.25,4.25V16.75A1.25116,1.25116,0,0,1,16.75,18ZM6.25,8.5A2.25,2.25,0,1,0,4,6.25,2.25309,2.25309,0,0,0,6.25,8.5Zm0-3a.75.75,0,1,1-.75.75A.75144.75144,0,0,1,6.25,5.5Z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+              height: 15px;
+              content: "";
+              mask: url("../img/icons/image.svg");
+              mask-size: contain;
+              mask-repeat: no-repeat;
+              background-color: $blue;
+              transition-duration: 300ms;
+              &:hover {
+                transform: scale(1.1);
+                transition-duration: 300ms;
+              }
             }
           }
         }
@@ -331,21 +355,6 @@
           display: inline-flex;
           flex-direction: column;
           margin-left: 40px;
-          &__delete {
-            content: url("../img/icons/delete.svg");
-            width: 15px;
-            height: 15px;
-            margin: 5px 0;
-            &.active {
-              content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 19.5 21.5'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23e32118; %7D %3C/style%3E%3C/defs%3E%3Ctitle%3Edelete%3C/title%3E%3Cg id='Слой_2' data-name='Слой 2'%3E%3Cg id='UI-kit'%3E%3Cg id='Body'%3E%3Cpath class='cls-1' d='M18.75,4H14.5V2.75A2.7528,2.7528,0,0,0,11.75,0h-4A2.7528,2.7528,0,0,0,5,2.75V4H.75a.75.75,0,0,0,0,1.5H2V18.75A2.7528,2.7528,0,0,0,4.75,21.5h10a2.7528,2.7528,0,0,0,2.75-2.75V5.5h1.25a.75.75,0,0,0,0-1.5ZM6.5,2.75A1.25116,1.25116,0,0,1,7.75,1.5h4A1.25116,1.25116,0,0,1,13,2.75V4H6.5Zm9.5,16A1.25116,1.25116,0,0,1,14.75,20h-10A1.25116,1.25116,0,0,1,3.5,18.75V5.5H16Zm-7.5-9v6a.75.75,0,0,1-1.5,0v-6a.75.75,0,0,1,1.5,0Zm4,0v6a.75.75,0,0,1-1.5,0v-6a.75.75,0,0,1,1.5,0Z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
-            }
-          }
-          &__edit {
-            content: url("../img/icons/edit.svg");
-            width: 15px;
-            height: 15px;
-            margin: 5px 0;
-          }
           &.edit {
             background-color: #ffffff;
             border-color: $blue;
@@ -367,12 +376,17 @@
 
                   }
                   &:after {
+                    height: 18px;
                     width: 18px;
                     left: 11px;
                     top: 10px;
                     position: absolute;
                     display: inline-block;
-                    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 19.5 21.5'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23ffffff; %7D %3C/style%3E%3C/defs%3E%3Ctitle%3Edelete%3C/title%3E%3Cg id='Слой_2' data-name='Слой 2'%3E%3Cg id='UI-kit'%3E%3Cg id='Body'%3E%3Cpath class='cls-1' d='M18.75,4H14.5V2.75A2.7528,2.7528,0,0,0,11.75,0h-4A2.7528,2.7528,0,0,0,5,2.75V4H.75a.75.75,0,0,0,0,1.5H2V18.75A2.7528,2.7528,0,0,0,4.75,21.5h10a2.7528,2.7528,0,0,0,2.75-2.75V5.5h1.25a.75.75,0,0,0,0-1.5ZM6.5,2.75A1.25116,1.25116,0,0,1,7.75,1.5h4A1.25116,1.25116,0,0,1,13,2.75V4H6.5Zm9.5,16A1.25116,1.25116,0,0,1,14.75,20h-10A1.25116,1.25116,0,0,1,3.5,18.75V5.5H16Zm-7.5-9v6a.75.75,0,0,1-1.5,0v-6a.75.75,0,0,1,1.5,0Zm4,0v6a.75.75,0,0,1-1.5,0v-6a.75.75,0,0,1,1.5,0Z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+                    content: "";
+                    mask: url("../img/icons/delete.svg");
+                    mask-size: contain;
+                    mask-repeat: no-repeat;
+                    background-color: #ffffff;
                   }
                 }
               }
@@ -391,18 +405,36 @@
                 border-radius: 10px;
                 cursor: pointer;
                 position: relative;
+                transition-duration: 300ms;
+                &:hover {
+                  transform: scale(1.1);
+                  transition-duration: 300ms;
+                  &:after {
+                    top: 8px;
+                  }
+                }
                 &:after {
-                  content: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 14.2 14.2' style='enable-background:new 0 0 14.2 14.2;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23BDBDBD;%7D%0A%3C/style%3E%3Cpath class='st0' d='M6.4,6.4H0.7C0.3,6.4,0,6.7,0,7.1c0,0.4,0.3,0.7,0.7,0.7h5.6v5.6c0,0.4,0.3,0.7,0.7,0.7c0.4,0,0.7-0.3,0.7-0.7 V7.9h5.6c0.4,0,0.7-0.3,0.7-0.7c0-0.2-0.1-0.4-0.2-0.5c-0.1-0.1-0.3-0.2-0.5-0.2H7.9V0.7c0-0.2-0.1-0.4-0.2-0.5C7.5,0.1,7.3,0,7.1,0 C6.7,0,6.4,0.3,6.4,0.7V6.4z'/%3E%3C/svg%3E%0A");
+                  content: "";
+                  mask: url("../img/icons/cross.svg");
+                  mask-size: contain;
+                  mask-repeat: no-repeat;
+                  background-color: $gray;
                   display: inline-block;
                   width: 20px;
                   height: 20px;
                   position: absolute;
-                  left: 9px;
-                  top: -2px;
+                  left: 8px;
+                  top: 9px;
                 }
               }
             }
           }
+          &.delete {
+            background-color: #ffffff;
+            border-color: $red;
+
+          }
+
           .edit_text {
             border: none;
             background-color: transparent;
@@ -418,10 +450,46 @@
               border-radius: 10px;
             }
           }
-          &.delete {
-            background-color: #ffffff;
-            border-color: $red;
 
+          &__delete {
+            width: 15px;
+            height: 15px;
+            margin: 5px 0;
+            content: "";
+            mask: url("../img/icons/delete.svg");
+            mask-size: contain;
+            mask-repeat: no-repeat;
+            background-color: $gray;
+            display: inline-block;
+            transition-duration: 300ms;
+            cursor: pointer;
+            &:hover {
+              transform: scale(1.2);
+              transition-duration: 300ms;
+            }
+            &.active {
+              background-color: $red;
+            }
+          }
+          &__edit {
+            width: 16px;
+            height: 16px;
+            margin: 5px 0;
+            content: "";
+            mask: url("../img/icons/edit.svg");
+            mask-size: contain;
+            mask-repeat: no-repeat;
+            background-color: $gray;
+            display: inline-block;
+            transition-duration: 300ms;
+            cursor: pointer;
+            &:hover {
+              transform: scale(1.2);
+              transition-duration: 300ms;
+            }
+            &.active {
+              display: none !important;
+            }
           }
           &__confirm {
             color: $gray;
@@ -437,19 +505,30 @@
               display: inline-block;
               width: 17px;
               height: 17px;
-              background-repeat: no-repeat;
-              background-size: contain;
+              mask-size: contain;
+              mask-repeat: no-repeat;
               cursor: pointer;
+              transition-duration: 300ms;
+              &:hover {
+                transform: scale(1.2);
+                transition-duration: 300ms;
+              }
             }
             .yes {
               width: 17px;
               height: 17px;
               margin-right: 15px;
-              background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13.13672 9.5'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %2300983a; %7D %3C/style%3E%3C/defs%3E%3Ctitle%3Echeck%3C/title%3E%3Cg id='Слой_2' data-name='Слой 2'%3E%3Cg id='UI-kit'%3E%3Cg id='Body'%3E%3Cpath class='cls-1' d='M4.38672,9.5a.74671.74671,0,0,1-.53027-.21973L.21973,5.64355A.74992.74992,0,1,1,1.28027,4.583L4.38672,7.68945,11.85645.21973A.74992.74992,0,0,1,12.917,1.28027l-8,8A.74671.74671,0,0,1,4.38672,9.5Z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+              mask: url("../img/icons/check.svg");
+              mask-size: contain;
+              mask-repeat: no-repeat;
+              background-color: $green;
             }
             .no {
               width: 12px;
-              background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10.5 10.5'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23e32118; %7D %3C/style%3E%3C/defs%3E%3Ctitle%3Eclose%3C/title%3E%3Cg id='Слой_2' data-name='Слой 2'%3E%3Cg id='UI-kit'%3E%3Cg id='Body'%3E%3Cpath class='cls-1' d='M6.31055,5.25l3.96972-3.96973A.74992.74992,0,0,0,9.21973.21973L5.25,4.18945,1.28027.21973A.74992.74992,0,0,0,.21973,1.28027L4.18945,5.25.21973,9.21973a.74992.74992,0,1,0,1.06054,1.06054L5.25,6.31055l3.96973,3.96972a.74992.74992,0,0,0,1.06054-1.06054Z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+              mask: url("../img/icons/close.svg");
+              mask-size: contain;
+              mask-repeat: no-repeat;
+              background-color: $red;
             }
           }
           &__control {
@@ -464,7 +543,6 @@
               margin: 5px;
               width: 20px;
               display: none;
-              cursor: pointer;
             }
             &.active {
               img {
@@ -562,28 +640,40 @@
     border: 1px solid $gray;
     border-top: none;
     position: absolute;
-
+    right: 58px;
+    width: 35px;
+    height: 33px;
     top: 0;
     background-color: $middle_gray;
     border-radius: 0 0 25px 25px;
     &__edit {
       right: 54px;
       &:after {
-        content: url("../img/icons/edit.svg");
-        width: 20px;
-        height: 20px;
-        display: inline-block;
-        margin: 7px 5px 7px 6px;
+        position: absolute;
+        top: 5px;
+        left: 7px;
+        width: 21px;
+        height: 21px;
+        content: "";
+        mask: url("../img/icons/edit.svg");
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        background-color: $gray;
       }
     }
     &__monitor {
-      right: 58px;
       &:after {
-        content: url("../img/icons/eye.svg");
-        width: 26px;
-        height: 26px;
+        position: absolute;
+        top: 9px;
+        left: 5px;
+        width: 24px;
+        height: 24px;
         display: inline-block;
-        margin: 8px 4px 0px 4px;
+        content: "";
+        mask: url("../img/icons/eye.svg");
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        background-color: $gray;
       }
     }
   }
@@ -667,13 +757,21 @@
 
     }
     .mark_button {
-      padding: 9px 10px;
+      padding: 9px 20px;
+      position: relative;
       border-radius: 20px 0 0 20px;
       &:after {
-        content: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 22 22' style='enable-background:new 0 0 22 22;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;stroke:%23E42119;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;%7D%0A%3C/style%3E%3Cg%3E%3Ccircle class='st0' cx='11' cy='11' r='10'/%3E%3Cline class='st0' x1='11' y1='7' x2='11' y2='15'/%3E%3Cline class='st0' x1='7' y1='11' x2='15' y2='11'/%3E%3C/g%3E%3C/svg%3E%0A");
+        content: "";
+        mask: url("../img/icons/add_mark.svg");
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        background-color: $red;
         display: inline-block;
         width: 22px;
         height: 22px;
+        position: absolute;
+        top: 9px;
+        left: 11px;
       }
       &__save {
         border-radius: 0 20px 20px 0;
@@ -701,16 +799,16 @@
         background-repeat: no-repeat;
       }
       &.full {
-        background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 35 35' style='enable-background:new 0 0 35 35;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23FFFFFF;%7D .st1%7Bfill:%23E42119;%7D%0A%3C/style%3E%3Cg%3E%3Cg%3E%3Cpath class='st0' d='M17.5,32.5c-8.3,0-15-6.7-15-15s6.7-15,15-15c8.3,0,15,6.7,15,15S25.8,32.5,17.5,32.5z'/%3E%3Cpath class='st1' d='M17.5,5C24.4,5,30,10.6,30,17.5S24.4,30,17.5,30S5,24.4,5,17.5S10.6,5,17.5,5 M17.5,0C7.8,0,0,7.8,0,17.5 S7.8,35,17.5,35S35,27.2,35,17.5S27.2,0,17.5,0L17.5,0z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+        background-image: url("../img/map/circle_1.svg")
       }
       &.half {
-        background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 35 35' style='enable-background:new 0 0 35 35;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23FFFFFF;%7D .st1%7Bfill:%23E42119;%7D .st2%7Bfill:%23BDBDBD;%7D%0A%3C/style%3E%3Cg%3E%3Cg%3E%3Cg%3E%3Cpath class='st0' d='M17.5,32.5c-8.3,0-15-6.7-15-15s6.7-15,15-15s15,6.7,15,15S25.8,32.5,17.5,32.5z'/%3E%3Cpath class='st1' d='M17.5,5C24.4,5,30,10.6,30,17.5S24.4,30,17.5,30S5,24.4,5,17.5S10.6,5,17.5,5 M17.5,0C7.8,0,0,7.8,0,17.5 S7.8,35,17.5,35S35,27.2,35,17.5S27.2,0,17.5,0L17.5,0z'/%3E%3C/g%3E%3C/g%3E%3Cpath class='st2' d='M17.5,0v5C24.4,5,30,10.6,30,17.5S24.4,30,17.5,30v5C27.2,35,35,27.2,35,17.5S27.2,0,17.5,0z'/%3E%3C/g%3E%3C/svg%3E%0A");
+        background-image: url("../img/map/circle_2.svg")
       }
       &.third {
-        background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 34.8 35' style='enable-background:new 0 0 34.8 35;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23FFFFFF;%7D .st1%7Bfill:%23E42119;%7D .st2%7Bfill:%23BDBDBD;%7D .st3%7Bfill:%23F9B233;%7D%0A%3C/style%3E%3Cg%3E%3Cg%3E%3Ccircle class='st0' cx='17.4' cy='17.5' r='15'/%3E%3Cpath class='st1' d='M17.4,5c6.9,0,12.5,5.6,12.5,12.5S24.3,30,17.4,30S4.9,24.4,4.9,17.5S10.5,5,17.4,5 M17.4,0 C7.8,0-0.1,7.8-0.1,17.5S7.7,35,17.4,35s17.5-7.8,17.5-17.5S27.1,0,17.4,0L17.4,0z'/%3E%3C/g%3E%3C/g%3E%3Cg%3E%3Cpath class='st1' d='M6.6,23.7c-1.1-1.8-1.7-4-1.7-6.2C4.9,10.6,10.5,5,17.4,5l0,0V0l0,0l0,0c-2.9,0-5.7,0.7-8.1,2 C9.2,2.1,9,2.1,8.9,2.2C8.7,2.3,8.5,2.5,8.3,2.6C8,2.8,7.7,3,7.4,3.2C7.2,3.3,7,3.5,6.8,3.6C6.5,3.8,6.3,4,6.1,4.2 C5.8,4.4,5.6,4.6,5.4,4.8C5.2,5,5,5.2,4.9,5.4C4.6,5.6,4.4,5.8,4.2,6C4.1,6.2,3.9,6.4,3.7,6.6C3.5,6.9,3.4,7.1,3.2,7.3 C3,7.6,2.9,7.8,2.7,8C2.6,8.3,2.4,8.5,2.3,8.7C2.1,9,2,9.3,1.8,9.5c-0.1,0.2-0.2,0.4-0.3,0.6c-0.1,0.3-0.3,0.6-0.4,1 c0,0.2-0.1,0.4-0.2,0.6c-0.1,0.3-0.2,0.7-0.3,1c-0.1,0.2-0.1,0.4-0.2,0.6c-0.1,0.3-0.2,0.7-0.2,1c0,0.2-0.1,0.5-0.1,0.7 c0,0.3-0.1,0.6-0.1,0.9s0,0.6,0,0.9s0,0.5,0,0.8s0,0.7,0,1s0,0.5,0.1,0.8c0,0.3,0.1,0.6,0.1,0.9s0.1,0.6,0.2,0.9 c0,0.2,0.1,0.4,0.2,0.7c0.1,0.3,0.2,0.7,0.3,1C1,23.1,1,23.2,1.1,23.4c0.1,0.4,0.3,0.8,0.5,1.2c0.1,0.1,0.1,0.3,0.2,0.4 c0.2,0.4,0.4,0.8,0.6,1.2c0,0,0,0.1,0.1,0.1L6.6,23.7z'/%3E%3Cpath class='st2' d='M17.4,0v5c6.9,0,12.5,5.6,12.5,12.5c0,2.3-0.6,4.4-1.7,6.2l4.3,2.5c0-0.1,0.1-0.1,0.1-0.2 c0.1-0.1,0.2-0.3,0.2-0.4c1.3-2.4,2-5.2,2-8.1l0,0C34.9,7.8,27.1,0,17.4,0z'/%3E%3Cpath class='st3' d='M31.3,28.2c0.2-0.2,0.3-0.4,0.5-0.6c0.2-0.3,0.4-0.6,0.6-0.9c0.1-0.1,0.2-0.3,0.2-0.4l-4.3-2.5 c-2.2,3.7-6.2,6.2-10.9,6.2c-4.6,0-8.6-2.5-10.8-6.3l-4.3,2.5c0.2,0.4,0.4,0.7,0.6,1l0,0c1.3,1.9,2.9,3.4,4.7,4.7l0,0 c0.4,0.3,0.8,0.5,1.2,0.7c0.4,0.2,0.8,0.4,1.2,0.6c0.1,0.1,0.3,0.1,0.4,0.2c0.4,0.2,0.8,0.3,1.2,0.5c0.2,0.1,0.3,0.1,0.5,0.2 c0.3,0.1,0.7,0.2,1,0.3c0.2,0.1,0.4,0.1,0.7,0.2c0.3,0.1,0.6,0.1,0.9,0.2c0.3,0,0.6,0.1,0.9,0.1c0.3,0,0.5,0,0.8,0.1 c0.3,0,0.6,0,1,0c0.3,0,0.5,0,0.8,0s0.6,0,0.9,0s0.6-0.1,0.9-0.1c0.2,0,0.5-0.1,0.7-0.1c0.3-0.1,0.7-0.1,1-0.2 c0.2,0,0.4-0.1,0.6-0.2c0.4-0.1,0.7-0.2,1-0.3c0.2-0.1,0.4-0.1,0.6-0.2c0.3-0.1,0.7-0.3,1-0.4c0.2-0.1,0.4-0.2,0.6-0.3 c0.3-0.1,0.6-0.3,0.8-0.5c0.2-0.1,0.5-0.3,0.7-0.4c0.2-0.2,0.5-0.3,0.7-0.5s0.5-0.3,0.7-0.5s0.4-0.3,0.6-0.5s0.5-0.4,0.7-0.6 s0.4-0.4,0.6-0.6s0.4-0.4,0.6-0.7C30.9,28.6,31.1,28.4,31.3,28.2z'/%3E%3C/g%3E%3C/svg%3E%0A");
+        background-image: url("../img/map/circle_3.svg")
       }
       &.four {
-        background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 35 35' style='enable-background:new 0 0 35 35;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23FFFFFF;%7D .st1%7Bfill:%23E42119;%7D .st2%7Bfill:none;%7D .st3%7Bfill:%2300983A;%7D .st4%7Bfill:%23BDBDBD;%7D .st5%7Bfill:%23F9B233;%7D%0A%3C/style%3E%3Cg%3E%3Cg%3E%3Cg%3E%3Cpath class='st0' d='M17.5,32.5c-8.3,0-15-6.7-15-15s6.7-15,15-15s15,6.7,15,15S25.8,32.5,17.5,32.5z'/%3E%3Cpath class='st1' d='M17.5,5C24.4,5,30,10.6,30,17.5S24.4,30,17.5,30S5,24.4,5,17.5S10.6,5,17.5,5 M17.5,0C7.8,0,0,7.8,0,17.5 S7.8,35,17.5,35S35,27.2,35,17.5S27.2,0,17.5,0L17.5,0z'/%3E%3C/g%3E%3C/g%3E%3Cg%3E%3Cg%3E%3Cpath class='st2' d='M17.5,5C10.6,5,5,10.6,5,17.5h12.5V5z'/%3E%3Cpath class='st1' d='M17.5,5V0C7.8,0,0,7.8,0,17.5h5C5,10.6,10.6,5,17.5,5z'/%3E%3Cpath class='st3' d='M17.5,35v-5C10.6,30,5,24.4,5,17.5H0C0,27.2,7.8,35,17.5,35z'/%3E%3Cpath class='st4' d='M30,17.5h5C35,7.8,27.2,0,17.5,0v5C24.4,5,30,10.6,30,17.5z'/%3E%3Cpath class='st5' d='M17.5,30v5C27.2,35,35,27.2,35,17.5h-5C30,24.4,24.4,30,17.5,30z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+        background-image: url("../img/map/circle_4.svg")
       }
     }
     &__big_mark {
