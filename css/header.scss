@@ -90,8 +90,10 @@
       width: 13px;
       content: "";
       mask: url("../img/icons/dropdown.svg");
-      mask-repeat: no-repeat;
+      -webkit-mask: url("../img/icons/dropdown.svg");
+     mask-repeat: no-repeat; -webkit-mask-repeat: no-repeat;
       mask-size: contain;
+      -webkit-mask-size: contain;
       background-color: $gray;
     }
     &__menu {

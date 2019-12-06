@@ -68,7 +68,7 @@
     font-size: 10pt;
 
   }
-  
+
   .see {
     &:after {
       cursor: pointer;
@@ -79,8 +79,11 @@
       height: 25px;
       content: "";
       mask: url("../img/icons/eye.svg");
+      -webkit-mask: url("../img/icons/eye.svg");
       mask-size: contain;
+      -webkit-mask-size: contain;
       mask-repeat: no-repeat;
+      -webkit-mask-repeat: no-repeat;
       background-color: $gray;
       display: inline-block;
     }
@@ -95,8 +98,11 @@
       height: 25px;
       content: "";
       mask: url("../img/icons/no_eye.svg");
+      -webkit-mask: ("../img/icons/no_eye.svg");
       mask-size: contain;
+      -webkit-mask-size: contain;
       mask-repeat: no-repeat;
+      -webkit-mask-repeat: no-repeat;
       background-color: $gray;
       display: inline-block;
     }
@@ -111,8 +117,11 @@
       height: 20px;
       content: "";
       mask: url("../img/icons/calendar.svg");
+      -webkit-mask: url("../img/icons/calendar.svg");
       mask-size: contain;
+      -webkit-mask-size: contain;
       mask-repeat: no-repeat;
+      -webkit-mask-repeat: no-repeat;
       background-color: $gray;
       display: inline-block;
     }
@@ -147,8 +156,11 @@
   &:after {
     content: "";
     mask: url("../img/icons/dropdown.svg");
+    -webkit-mask: url("../img/icons/dropdown.svg");
     mask-size: contain;
+    -webkit-mask-size: contain;
     mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
     background-color: $gray;
     display: block;
     right: 22px;
@@ -281,8 +293,11 @@
       height: 10px;
       content: "";
       mask: url("../img/icons/check.svg");
+      -webkit-mask: url("../img/icons/check.svg");
       mask-size: contain;
+      -webkit-mask-size: contain;
       mask-repeat: no-repeat;
+      -webkit-mask-repeat: no-repeat;
       background-color: $red;
     }
   }

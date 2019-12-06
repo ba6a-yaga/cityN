@@ -216,8 +216,11 @@
               position: absolute;
               content: "";
               mask: url("../img/icons/video.svg");
+              -webkit-mask: url("../img/icons/video.svg");
               mask-size: contain;
+              -webkit-mask-size: contain;
               mask-repeat: no-repeat;
+              -webkit-mask-repeat: no-repeat;
               background-color: #ffffff;
               display: inline-block;
               width: 18px;
@@ -260,8 +263,11 @@
               height: 20px;
               content: "";
               mask: url("../img/icons/video.svg");
+              -webkit-mask: url("../img/icons/video.svg");
               mask-size: contain;
+              -webkit-mask-size: contain;
               mask-repeat: no-repeat;
+              -webkit-mask-repeat: no-repeat;
               background-color: $blue;
               transition-duration: 300ms;
               &:hover {
@@ -277,8 +283,11 @@
               height: 15px;
               content: "";
               mask: url("../img/icons/image.svg");
+              -webkit-mask: url("../img/icons/image.svg");
               mask-size: contain;
+              -webkit-mask-size: contain;
               mask-repeat: no-repeat;
+              -webkit-mask-repeat: no-repeat;
               background-color: $blue;
               transition-duration: 300ms;
               &:hover {
@@ -384,8 +393,11 @@
                     display: inline-block;
                     content: "";
                     mask: url("../img/icons/delete.svg");
+                    -webkit-mask: url("../img/icons/delete.svg");
                     mask-size: contain;
+                    -webkit-mask-size: contain;
                     mask-repeat: no-repeat;
+                    -webkit-mask-repeat: no-repeat;
                     background-color: #ffffff;
                   }
                 }
@@ -416,8 +428,11 @@
                 &:after {
                   content: "";
                   mask: url("../img/icons/cross.svg");
+                  -webkit-mask: url("../img/icons/cross.svg");
                   mask-size: contain;
+                  -webkit-mask-size: contain;
                   mask-repeat: no-repeat;
+                  -webkit-mask-repeat: no-repeat;
                   background-color: $gray;
                   display: inline-block;
                   width: 20px;
@@ -457,8 +472,11 @@
             margin: 5px 0;
             content: "";
             mask: url("../img/icons/delete.svg");
+            -webkit-mask: url("../img/icons/delete.svg");
             mask-size: contain;
+            -webkit-mask-size: contain;
             mask-repeat: no-repeat;
+            -webkit-mask-repeat: no-repeat;
             background-color: $gray;
             display: inline-block;
             transition-duration: 300ms;
@@ -477,8 +495,11 @@
             margin: 5px 0;
             content: "";
             mask: url("../img/icons/edit.svg");
+            -webkit-mask: url("../img/icons/edit.svg");
             mask-size: contain;
+            -webkit-mask-size: contain;
             mask-repeat: no-repeat;
+            -webkit-mask-repeat: no-repeat;
             background-color: $gray;
             display: inline-block;
             transition-duration: 300ms;
@@ -506,7 +527,9 @@
               width: 17px;
               height: 17px;
               mask-size: contain;
+              -webkit-mask-size: contain;
               mask-repeat: no-repeat;
+              -webkit-mask-repeat: no-repeat;
               cursor: pointer;
               transition-duration: 300ms;
               &:hover {
@@ -519,15 +542,21 @@
               height: 17px;
               margin-right: 15px;
               mask: url("../img/icons/check.svg");
+              -webkit-mask: url("../img/icons/check.svg");
               mask-size: contain;
+              -webkit-mask-size: contain;
               mask-repeat: no-repeat;
+              -webkit-mask-repeat: no-repeat;
               background-color: $green;
             }
             .no {
               width: 12px;
               mask: url("../img/icons/close.svg");
+              -webkit-mask: url("../img/icons/close.svg");
               mask-size: contain;
+              -webkit-mask-size: contain;
               mask-repeat: no-repeat;
+              -webkit-mask-repeat: no-repeat;
               background-color: $red;
             }
           }
@@ -656,8 +685,11 @@
         height: 21px;
         content: "";
         mask: url("../img/icons/edit.svg");
+        -webkit-mask: url("../img/icons/edit.svg");
         mask-size: contain;
+        -webkit-mask-size: contain;
         mask-repeat: no-repeat;
+        -webkit-mask-repeat: no-repeat;
         background-color: $gray;
       }
     }
@@ -671,8 +703,11 @@
         display: inline-block;
         content: "";
         mask: url("../img/icons/eye.svg");
+        -webkit-mask: url("../img/icons/eye.svg");
         mask-size: contain;
+        -webkit-mask-size: contain;
         mask-repeat: no-repeat;
+        -webkit-mask-repeat: no-repeat;
         background-color: $gray;
       }
     }
@@ -763,8 +798,11 @@
       &:after {
         content: "";
         mask: url("../img/icons/add_mark.svg");
+        -webkit-mask: url("../img/icons/add_mark.svg");
         mask-size: contain;
+        -webkit-mask-size: contain;
         mask-repeat: no-repeat;
+        -webkit-mask-repeat: no-repeat;
         background-color: $red;
         display: inline-block;
         width: 22px;
