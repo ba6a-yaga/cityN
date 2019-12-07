@@ -458,7 +458,7 @@
             height: 16px;
             margin: 5px 0;
             content: "";
-            @include edit(dbdbdb);
+            @include edit(bdbdbd);
             display: inline-block;
             transition-duration: 300ms;
             cursor: pointer;
@@ -621,7 +621,7 @@
         width: 21px;
         height: 21px;
         content: "";
-        @include edit(dbdbdb);
+        @include edit(bdbdbd);
       }
     }
     &__monitor {
