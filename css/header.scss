@@ -4,8 +4,20 @@
   background-color: $white;
   height: 55px;
   padding: 0;
+  &__mobile_menu{
+    padding: 10px 20px 10px 0px;
+    cursor: pointer;
+    display: none;
+    @media(max-width: $sm){
+      display: inline-block;
+    }
+    img{
+      width: 30px;
+      height: auto;
+    }
+  }
   &__container {
-    @media(max-width: 776px) {
+    @media(max-width: $md) {
       padding: 0 15px;
     }
     padding-right: 25px;
@@ -49,7 +61,7 @@
   &__link {
     padding: 0 8px;
     align-items: center;
-    @media(max-width: 776px) {
+    @media(max-width: $md) {
       padding: 0;
       justify-content: center;
       width: 100%;
@@ -90,6 +102,9 @@
       width: 13px;
       content: "";
       @include dropdown(bdbdbd);
+      @media (max-width: $md) {
+          display: none;
+      }
     }
     &__menu {
       position: absolute !important;
@@ -127,6 +142,9 @@
       border-radius: 50%;
       width: 32px;
       height: 32px;
+      @media(max-width: $sm){
+        margin-right: 0px;
+      }
     }
   }
 }

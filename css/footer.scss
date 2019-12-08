@@ -51,10 +51,10 @@
     width: 100%;
     font-size: 10pt;
     margin-right: 130px;
-    @media (max-width: 768px) {
+    @media (max-width: $md) {
       margin-right: 0px;
     }
-    @media (max-width: 576px) {
+    @media (max-width: $sm) {
       padding: 0px 20px 25px 20px;
     }
     &__footer {
@@ -69,7 +69,7 @@
     font-size: 10pt;
     padding: 0px;
     flex: 1;
-    @media (max-width: 576px) {
+    @media (max-width: $sm) {
       padding: 0px 20px;
     }
     p {
@@ -89,6 +89,9 @@
     color: #949391;
     font-size: 7.7pt;
     display: flex;
+    @media(max-width: $sm){
+      flex-direction: column;
+    }
     div {
       padding-bottom: 15px;
       white-space: nowrap;

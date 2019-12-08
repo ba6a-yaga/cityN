@@ -11,6 +11,9 @@ $green: #00983a;
 $orange: #f9b233;
 $dark_brown: #282423;
 
+$sm: 576px;
+$md: 768px;
+
 @import "svg";
 @import "forms";
 @import "header";
@@ -241,7 +244,7 @@ h3 {
 .tab {
   border: 1px solid #dadada;
   color: #bebebe;
-  display: flex;
+  display: inline-flex;
   border-radius: 20px;
   font-size: 11pt;
   .tab-link {
@@ -298,6 +301,7 @@ h3 {
   color: #dadada;
   border: 1px dashed #dadada;
   padding: 40px 14px;
+  display: inline-block;
 }
 
 .notion {

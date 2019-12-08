@@ -22,6 +22,9 @@
 <header>
     <div class="navbar navbar-light header">
         <div class="header__container">
+            <div class="header__mobile_menu">
+                <img src="img/icons/burger.svg" alt="">
+            </div>
 
             <a class="navbar-brand header__logo" href="#">
                 <img src="img/logo/cityN.svg" alt="">
@@ -112,6 +115,7 @@
 
 <main role="main">
     <div class="container">
+
         <div class="row">
             <div class="col-12">
                 <h1>Заголовок типа Н1 — Helvetica Neue Medium 21 pt</h1>
@@ -126,45 +130,62 @@
                 <p><span class="tag">Текст в теге Helvetica Neue Medium 8 pt</span></p>
             </div>
         </div>
+
         <div class="row ">
-            <button type="button" class="btn btn-main mr-5">Войти</button>
-            <button type="button" class="btn btn-second mr-5">Отклонить</button>
-            <button type="button" class="btn btn-third mr-5">Отмена</button>
-            <button type="button" class="btn btn-third mr-5 btn-disabled" disabled>Отмена</button>
-            <button type="button" class="btn btn-main mr-5 btn-disabled" disabled>Войти</button>
-        </div>
-        <div class="row mt-3">
-            <button type="button" class="btn btn-main btn-small btn-size mr-2"></button>
-            <button type="button" class="btn btn-main btn-small btn-send mr-2"></button>
-            <button type="button" class="btn btn-main btn-small btn-close mr-2"></button>
-        </div>
-        <div class="row mt-3">
-            <div class="tab">
-                <a class="tab-link active">М</a>
-                <a class="tab-link ">Ж</a>
+            <div class="col-12">
+                <button type="button" class="btn btn-main mb-3 mr-4">Войти</button>
+                <button type="button" class="btn btn-second mr-4">Отклонить</button>
+                <button type="button" class="btn btn-third mr-4">Отмена</button>
+                <button type="button" class="btn btn-third mr-4 btn-disabled" disabled>Отмена</button>
+                <button type="button" class="btn btn-main mr-4 btn-disabled" disabled>Войти</button>
             </div>
         </div>
+
         <div class="row mt-3">
-            <a class="popup_link" href="#">
-                <img src="img/icons/external_link.svg" alt="">
-            </a>
+            <div class="col-12 d-flex">
+                <button type="button" class="btn btn-main btn-small btn-size mr-2"></button>
+                <button type="button" class="btn btn-main btn-small btn-send mr-2"></button>
+                <button type="button" class="btn btn-main btn-small btn-close mr-2"></button>
+            </div>
         </div>
+
         <div class="row mt-3">
-            <span class="photo_load" style="max-width: 260px">
-                <p>Вы можете добавить фото объемом максимум 5 Мб. в формате .jpg или .png</p>
-                <a class="mt-1" href="#">Загрузить фото</a>
-            </span>
+            <div class="col-12">
+                <div class="tab">
+                    <a class="tab-link active">М</a>
+                    <a class="tab-link ">Ж</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-12">
+                <a class="popup_link" href="#">
+                    <img src="img/icons/external_link.svg" alt="">
+                </a>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="photo_load" style="max-width: 260px">
+                    <p>Вы можете добавить фото объемом максимум 5 Мб. в формате .jpg или .png</p>
+                    <a class="mt-1" href="#">Загрузить фото</a>
+                </div>
+            </div>
         </div>
 
         <div class="row inputList mt-3">
-            <span class="input_form mr-3">
-                <span id="txt" class="label full">Введите текст</span>
-                <input id="inputTxt" type="text" value="" onchange="txtInput('txt','inputTxt')">
-                 <span class="sub_txt">&emsp;</span>
-            </span>
+            <div class="col-12">
 
-            <span class="input_form mr-3">
-                <span class="see" onclick="if(this.classList.contains('see')){
+                <span class="input_form mb-3 mr-3">
+                    <span id="txt" class="label full">Введите текст</span>
+                    <input id="inputTxt" type="text" value="" onchange="txtInput('txt','inputTxt')">
+                    <span class="sub_txt">&emsp;</span>
+                </span>
+
+                <span class="input_form mb-3 mr-3">
+                    <span class="see" onclick="if(this.classList.contains('see')){
                     this.classList.add('hide');
                     this.classList.remove('see');
                     document.getElementById('inputTxtPass').type = 'text';
@@ -173,566 +194,627 @@
                     this.classList.remove('hide');
                     document.getElementById('inputTxtPass').type = 'password';
                 }"></span>
-                <span id="txtPass" class="label">Введите пароль</span>
-                <input class="" id="inputTxtPass" type="password" value=""
-                       onchange="txtInput('txtPass','inputTxtPass')">
-                        <span class="sub_txt">&emsp;</span>
-            </span>
-
-            <span class="input_form error mr-3">
-                <span id="txtAlert" class="label">Электронная почта</span>
-                <input id="inputTxtAlert" type="email" value="solomatin123"
-                       onchange="txtInput('txtAlert','inputTxtAlert')">
-                <span class="sub_txt">Текстовое предупреждение об ошибке ввода</span>
-            </span>
-
-            <span class="input_form mr-3">
-                <span class="calendar"></span>
-                <span id="txtCalendar" class="label">Введите дату</span>
-                <input id="txtInputCalendar" type="text" onchange="txtInput('txtCalendar','txtInputCalendar')">
-                <span class="sub_txt">Текстовaя подсказка для формы ввода</span>
-            </span>
-
-            <span class="input_form disable mr-3">
-                <span class="label">Неактивная форма ввода</span>
-                <input type="text" value="" disabled>
-                <span class="sub_txt">&emsp;</span>
-            </span>
-
-            <label class="checkbox_container mr-4">Есть нарушения
-                <input type="checkbox" checked="checked">
-                <span class="checkmark"></span>
-            </label>
-
-            <label class="checkbox_container">Есть нарушения
-                <input type="checkbox">
-                <span class="checkmark"></span>
-            </label>
-
-        </div>
-        <div class="row mt-3" style="max-width: 290px">
-            <div class="input_selector"> <!--Добавить empty если ни один вариант не выбран-->
-                <select>
-                    <option class="dropdown-item" value="0" disabled selected="selected" hidden>Выберите категорию
-                    </option>
-                    <option class="dropdown-item" value="1">Категория 1</option>
-                    <option class="dropdown-item" value="2">Категория 2</option>
-                    <option class="dropdown-item" value="3">Категория 3</option>
-                    <option class="dropdown-item" value="4">Категория 4</option>
-                </select>
-            </div>
-        </div>
-        <div class="row mt-3">
-            <div class="card card__small">
-                <div class="card__tag card__tag__monitor"></div>
-                <div class="card__text">
-                    <span class="card__text__number">№0372200035519000031</span>
-                    <p class="card__text__subtitle gray">Поставка</p>
-                    <p class="card__text__content">Поставка мультимедийного оборудования и офисной техники для нужд
-                        воспитанников
-                        ГБОУ
-                        школы №544...</p>
-                    <p class="card__text__price">2 809 092,00 <span class="card__subtitle">руб.</span></p>
-                </div>
-            </div>
-        </div>
-        <div class="row mt-3">
-            <div class="card card__small">
-                <div class="card__tag card__tag__edit"></div>
-                <div class="card__text">
-                    <span class="card__text__number">№31908499444</span>
-                    <p class="card__text__subtitle gray">Благоустройство</p>
-                    <p class="card__text__content">Оказание услуг по спилу деревьев</p>
-                    <p class="card__text__price">598 881,00 <span class="card__subtitle">руб.</span></p>
-                </div>
-            </div>
-        </div>
-        <div class="row mt-3">
-            <div class="card card__small d-inline-flex align-items-center flex-row card__text">
-                <span class="card__avatar">см</span>
-                <h2 class="card__name m-0">Соломатин Михаил Михайлович</h2>
-            </div>
-        </div>
-        <div class="row mt-3">
-            <div class="card card__news mr-3">
-                <div class="card__content card__video">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/S_dfq9rFWAE" frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                </div>
-                <div class="card__text">
-                    <h2>Активисты ОНФ выявили в «Городе N» — Бердске сомнительные закупки на сумму 260 млн рублей</h2>
-                    <p class="gray">
-                        Активисты и эксперты проекта ОНФ «За честные закупки» в рамках инициативы «Город N» проверили
-                        закупки в
-                        городе Бердск Новосибирской области. В разряд сомнительных попали закупки на строительство и
-                        капитальный
-                        ремонт зданий и сооружений, благоустройство территорий и строительство дорог на общую сумму 260
-                        млн руб.
-                        Всю информацию эксперты ОНФ передали в прокуратуру.
-                    </p>
-                </div>
-                <div class="card__button">
-                    <button type="button" class="btn btn-second">Редактировать</button>
-                    <button type="button" class="btn btn-third mr-4">Удалить</button>
-                </div>
-            </div>
-
-            <div class="card card__news">
-                <div class="card__content">
-                    <img src="https://picsum.photos/500/300" alt="">
-                </div>
-                <div class="card__text">
-                    <p class="card__date">9 июля 2019 года, 12:13</p>
-                    <p>Активисты ОНФ выехали в первый «город N» и сразу нашли сомнительные закупки на 200 млн рублей</p>
-                    <p class="card__subtitle gray">
-                        «Город N» — инициатива активистов проекта «За честные закупки», приуроченная к 210-летию со дня
-                        рождения Н.В. Гоголя. Вместе с экспертами они выезжают в населенные пункты до 100 тыс. человек и
-                        проводят комплексную оценку закуп...
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="row mt-3">
-            <div class="card card__popup">
-                <div class="card__popup__close">
-                    <button type="button" class="btn btn-main btn-small btn-close"></button>
-                </div>
-                <div class="card__popup__header">
-                    Изменение статуса работы
-                </div>
-                <h2>Реставрация зон <br>отдыха</h2>
-
-                <div class="card__popup__input_container">
-                    <div class="input_selector"> <!--Добавить empty если ни один вариант не выбран-->
-                        <select>
-                            <option class="dropdown-item" value="1" selected="selected">Завершено</option>
-                            <option class="dropdown-item" value="2">Незавершено</option>
-                        </select>
-                    </div>
-
-                    <span class="input_form">
-                    <textarea class="empty" type="text">Оставьте текстровый коментарий</textarea>
-                        <!--Добавить empty если ни один вариант не выбран-->
+                    <span id="txtPass" class="label">Введите пароль</span>
+                    <input class="" id="inputTxtPass" type="password" value=""
+                           onchange="txtInput('txtPass','inputTxtPass')">
+                    <span class="sub_txt">&emsp;</span>
                 </span>
 
-                    <span class="photo_load">
+                <span class="input_form error mb-3 mr-3">
+                    <span id="txtAlert" class="label">Электронная почта</span>
+                    <input id="inputTxtAlert" type="email" value="solomatin123"
+                           onchange="txtInput('txtAlert','inputTxtAlert')">
+                    <span class="sub_txt">Текстовое предупреждение об ошибке ввода</span>
+                </span>
+
+                <span class="input_form mb-3 mr-3">
+                    <span class="calendar"></span>
+                    <span id="txtCalendar" class="label">Введите дату</span>
+                    <input id="txtInputCalendar" type="text" onchange="txtInput('txtCalendar','txtInputCalendar')">
+                    <span class="sub_txt">Текстовaя подсказка для формы ввода</span>
+                </span>
+
+                <span class="input_form disable mb-3 mr-3">
+                    <span class="label">Неактивная форма ввода</span>
+                    <input type="text" value="" disabled>
+                    <span class="sub_txt">&emsp;</span>
+                </span>
+
+                <label class="checkbox_container mb-3 mr-4">Есть нарушения
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="checkbox_container">Есть нарушения
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-sm-12 col-md-8 col-lg-5">
+                <div class="input_selector"> <!--Добавить empty если ни один вариант не выбран-->
+                    <select>
+                        <option class="dropdown-item" value="0" disabled selected="selected" hidden>Выберите категорию
+                        </option>
+                        <option class="dropdown-item" value="1">Категория 1</option>
+                        <option class="dropdown-item" value="2">Категория 2</option>
+                        <option class="dropdown-item" value="3">Категория 3</option>
+                        <option class="dropdown-item" value="4">Категория 4</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-sm-12 col-md-8 col-lg-5">
+                <div class="card card__small flag">
+                    <div class="card__tag card__tag__monitor"></div>
+                    <div class="card__text">
+                        <span class="card__text__number">№0372200035519000031</span>
+                        <p class="card__text__subtitle gray">Поставка</p>
+                        <p class="card__text__content">Поставка мультимедийного оборудования и офисной техники для нужд
+                            воспитанников
+                            ГБОУ
+                            школы №544...</p>
+                        <p class="card__text__price">2 809 092,00 <span class="card__subtitle">руб.</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-sm-12 col-md-8 col-lg-5">
+                <div class="card card__small">
+                    <div class="card__tag card__tag__edit"></div>
+                    <div class="card__text">
+                        <span class="card__text__number">№31908499444</span>
+                        <p class="card__text__subtitle gray">Благоустройство</p>
+                        <p class="card__text__content">Оказание услуг по спилу деревьев</p>
+                        <p class="card__text__price">598 881,00 <span class="card__subtitle">руб.</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-sm-12 col-md-8 col-lg-5">
+                <div class="card card__small d-inline-flex align-items-center flex-row card__text">
+                    <span class="card__avatar">см</span>
+                    <h2 class="card__name m-0">Соломатин Михаил Михайлович</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-sm-12 col-md-8 col-lg-5">
+                <div class="card card__news mb-3 mr-3">
+                    <div class="card__content card__video">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/S_dfq9rFWAE" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="card__text">
+                        <h2>Активисты ОНФ выявили в «Городе N» — Бердске сомнительные закупки на сумму 260 млн
+                            рублей</h2>
+                        <p class="gray">
+                            Активисты и эксперты проекта ОНФ «За честные закупки» в рамках инициативы «Город N»
+                            проверили
+                            закупки в
+                            городе Бердск Новосибирской области. В разряд сомнительных попали закупки на строительство и
+                            капитальный
+                            ремонт зданий и сооружений, благоустройство территорий и строительство дорог на общую сумму
+                            260
+                            млн руб.
+                            Всю информацию эксперты ОНФ передали в прокуратуру.
+                        </p>
+                    </div>
+                    <div class="card__button">
+                        <button type="button" class="btn btn-second">Редактировать</button>
+                        <button type="button" class="btn btn-third mr-4">Удалить</button>
+                    </div>
+                </div>
+
+                <div class="card card__news mb-3">
+                    <div class="card__content">
+                        <img src="https://picsum.photos/500/300" alt="">
+                    </div>
+                    <div class="card__text">
+                        <p class="card__date">9 июля 2019 года, 12:13</p>
+                        <p>Активисты ОНФ выехали в первый «город N» и сразу нашли сомнительные закупки на 200 млн
+                            рублей</p>
+                        <p class="card__subtitle gray">
+                            «Город N» — инициатива активистов проекта «За честные закупки», приуроченная к 210-летию со
+                            дня
+                            рождения Н.В. Гоголя. Вместе с экспертами они выезжают в населенные пункты до 100 тыс.
+                            человек и
+                            проводят комплексную оценку закуп...
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-sm-12 col-md-8 col-lg-5">
+                <div class="card card__popup">
+                    <div class="card__popup__close">
+                        <button type="button" class="btn btn-main btn-small btn-close"></button>
+                    </div>
+                    <div class="card__popup__header">
+                        Изменение статуса работы
+                    </div>
+                    <h2>Реставрация зон <br>отдыха</h2>
+
+                    <div class="card__popup__input_container">
+                        <div class="input_selector"> <!--Добавить empty если ни один вариант не выбран-->
+                            <select>
+                                <option class="dropdown-item" value="1" selected="selected">Завершено</option>
+                                <option class="dropdown-item" value="2">Незавершено</option>
+                            </select>
+                        </div>
+
+                        <span class="input_form">
+                    <textarea class="empty" type="text">Оставьте текстровый коментарий</textarea>
+                            <!--Добавить empty если ни один вариант не выбран-->
+                </span>
+
+                        <span class="photo_load">
                 <p>Добавьте изображения в формате JPEG или PNG</p>
                 </span>
 
-                    <span class="input_form mb-3">
-                <span id="txt4" class="label full">Вставьте ссылку на YouTube</span>
-                <input id="inputTxt4" type="text" value="" onchange="txtInput('txt4','inputTxt4')">
-                 <span class="sub_txt">&emsp;</span>
-                </span>
+                        <span class="input_form mb-3">
+                            <span id="txt4" class="label full">Вставьте ссылку на YouTube</span>
+                            <input id="inputTxt4" type="text" value="" onchange="txtInput('txt4','inputTxt4')">
+                            <span class="sub_txt">&emsp;</span>
+                        </span>
+                    </div>
+                    <button type="button" class="btn btn-main button mb-3">Изменить</button>
+                    <button type="button" class="btn btn-third mb-3">Отмена</button>
                 </div>
-                <button type="button" class="btn btn-main button mb-3">Изменить</button>
-                <button type="button" class="btn btn-third mb-3">Отмена</button>
-            </div>
-        </div>
-        <div class="row mt-3">
-            <div class="card__popup__notification">
-                <span>Вы присоединились к мониторингу</span>
-                <button type="button" class="btn btn-main ml-3">Оставить коментарий</button>
             </div>
         </div>
 
         <div class="row mt-3">
-            <div class="card card__list">
-                <div class="card__list__item" onclick="
+            <div class="col-12">
+                <div class="card__popup__notification">
+                    <span>Вы присоединились к мониторингу</span>
+                    <button type="button" class="btn btn-main ml-3">Оставить коментарий</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="card card__list">
+                    <div class="card__list__item" onclick="
                 if (this.classList.contains('active')){
                  this.classList.remove('active');
                 } else{
                    this.classList.add('active');
                 }
                 ">
-                    <div class="card__list__item__header">
-                        <span>Ограничение конкуренции</span>
-                        <span class="arrow"></span>
+                        <div class="card__list__item__header">
+                            <span>Ограничение конкуренции</span>
+                            <span class="arrow"></span>
+                        </div>
+                        <div class="card__list__item__content"></div>
                     </div>
-                    <div class="card__list__item__content"></div>
-                </div>
-                <div class="card__list__item" onclick="
+                    <div class="card__list__item" onclick="
                 if (this.classList.contains('active')){
                  this.classList.remove('active');
                 } else{
                    this.classList.add('active');
                 }
                 ">
-                    <div class="card__list__item__header">
-                        <span>Роскошь</span>
-                        <span class="arrow"></span>
+                        <div class="card__list__item__header">
+                            <span>Роскошь</span>
+                            <span class="arrow"></span>
+                        </div>
+                        <div class="card__list__item__content"></div>
                     </div>
-                    <div class="card__list__item__content"></div>
-                </div>
-                <div id="opens" class="card__list__item">
-                    <div class="card__list__item__header" onclick="Dropdown('opens')">
-                        <span>Завышение стоймости</span>
-                        <span class="arrow"></span>
-                    </div>
-                    <div class="card__list__item__content">
-                        <div class="card__list__item__block">
-                            <div class="card__list__item__comment">
-                                <div class="card__list__item__comment__header">
-                                    <div class="card__list__item__comment__card">
-                                        <span class="card__avatar">ди</span>
-                                        <div class="card__list__item__comment__name">
-                                            <h2>Долгов Иван</h2>
-                                            <span class="card__subtitle">10.11.2019 12:00</span>
+                    <div id="opens" class="card__list__item">
+                        <div class="card__list__item__header" onclick="Dropdown('opens')">
+                            <span>Завышение стоймости</span>
+                            <span class="arrow"></span>
+                        </div>
+                        <div class="card__list__item__content">
+                            <div class="card__list__item__block">
+                                <div class="card__list__item__comment">
+                                    <div class="card__list__item__comment__header">
+                                        <div class="card__list__item__comment__card">
+                                            <span class="card__avatar">ди</span>
+                                            <div class="card__list__item__comment__name">
+                                                <h2>Долгов Иван</h2>
+                                                <span class="card__subtitle">10.11.2019 12:00</span>
+                                            </div>
+                                        </div>
+                                        <div class="card__list__item__comment__tag__container">
+                                            <span class="card__list__item__comment__tag green">Исполнено</span>
                                         </div>
                                     </div>
-                                    <span class="card__list__item__comment__tag green">Исполнено</span>
-                                </div>
-                                <div class="card__list__item__comment__body">
-                                    <div class="card__list__item__comment__text__control">
-                                        <div class="card__list__item__comment__text__edit"></div>
-                                        <div class="card__list__item__comment__text__delete"></div>
-                                    </div>
-                                    <div class="card__list__item__comment__text">
-                                        Заметил серьезные нарушения в ценообразовании!
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="card__list__item__comment">
-                                <div class="card__list__item__comment__header">
-                                    <div class="card__list__item__comment__card">
-                                        <span class="card__avatar">см</span>
-                                        <div class="card__list__item__comment__name">
-                                            <h2>Соломатин Михаил</h2>
-                                            <span class="card__subtitle">15.11.2019 22:00</span>
+                                    <div class="card__list__item__comment__body">
+                                        <div class="card__list__item__comment__text__control">
+                                            <div class="card__list__item__comment__text__edit"></div>
+                                            <div class="card__list__item__comment__text__delete"></div>
+                                        </div>
+                                        <div class="card__list__item__comment__text">
+                                            Заметил серьезные нарушения в ценообразовании!
                                         </div>
                                     </div>
-                                    <span class="card__list__item__comment__tag red">Есть нарушений</span>
                                 </div>
 
-                                <div class="card__list__item__comment__body">
-                                    <div class="card__list__item__comment__text__control active">
-                                        <div class="card__list__item__comment__text__edit"></div>
-                                        <div class="card__list__item__comment__text__delete"></div>
+                                <div class="card__list__item__comment">
+                                    <div class="card__list__item__comment__header">
+                                        <div class="card__list__item__comment__card">
+                                            <span class="card__avatar">см</span>
+                                            <div class="card__list__item__comment__name">
+                                                <h2>Соломатин Михаил</h2>
+                                                <span class="card__subtitle">15.11.2019 22:00</span>
+                                            </div>
+                                        </div>
+                                        <div class="card__list__item__comment__tag__container">
+                                            <span class="card__list__item__comment__tag red">Есть нарушений</span>
+                                        </div>
                                     </div>
-                                    <div class="card__list__item__comment__text">
-                                        Заметил серьезные нарушения в ценообразовании! Давайте соберемся и коллективно
-                                        скажем свое «фи»!
-                                    </div>
-                                </div>
 
-                            </div>
-                            <button type="button" class="btn btn-third card__list__item__comment__button">Показать все
-                                комментарии
-                            </button>
-                            <div class="card__list__item__comment__add">
-                                <span class="card__avatar">см</span>
-                                <span class="input_form">
+                                    <div class="card__list__item__comment__body">
+                                        <div class="card__list__item__comment__text__control active">
+                                            <div class="card__list__item__comment__text__edit"></div>
+                                            <div class="card__list__item__comment__text__delete"></div>
+                                        </div>
+                                        <div class="card__list__item__comment__text">
+                                            Заметил серьезные нарушения в ценообразовании! Давайте соберемся и
+                                            коллективно
+                                            скажем свое «фи»!
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <button type="button" class="btn btn-third card__list__item__comment__button">Показать
+                                    все
+                                    комментарии
+                                </button>
+                                <div class="card__list__item__comment__add">
+                                    <span class="card__avatar">см</span>
+                                    <span class="input_form">
                                     <span id="txt2" class="label full">Введите текст</span>
                                     <input id="inputTxt2" type="text" value="" onchange="txtInput('txt3','inputTxt3')">
                                 </span>
-                                <button type="button" class="btn btn-main btn-small btn-send ml-3"></button>
-                            </div>
-                            <label class="checkbox_container">Есть нарушения
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row mt-3">
-            <div class="card card__list">
-                <div class="card__list__item" onclick="
-                if (this.classList.contains('active')){
-                 this.classList.remove('active');
-                } else{
-                   this.classList.add('active');
-                }
-                ">
-                    <div class="card__list__item__header">
-                        <span>Покраска фасада</span>
-                        <span class="arrow"></span>
-                    </div>
-                    <div class="card__list__item__content"></div>
-                </div>
-                <div class="card__list__item" onclick="
-                if (this.classList.contains('active')){
-                 this.classList.remove('active');
-                } else{
-                   this.classList.add('active');
-                }
-                ">
-                    <div class="card__list__item__header">
-                        <span>Роскошь</span>
-                        <span class="arrow"></span>
-                    </div>
-                    <div class="card__list__item__content"></div>
-                </div>
-                <div id="opens2" class="card__list__item">
-                    <div class="card__list__item__header" onclick="Dropdown('opens2')">
-                        <span>Завышение стоимости</span>
-                        <span class="arrow"></span>
-                    </div>
-                    <div class="card__list__item__content">
-                        <div class="card__list__item__block">
-                            <div class="card__list__item__comment">
-                                <div class="card__list__item__comment__header">
-                                    <div class="card__list__item__comment__card">
-                                        <span class="card__avatar">ди</span>
-                                        <div class="card__list__item__comment__name">
-                                            <h2>Долгов Иван</h2>
-                                            <span class="card__subtitle">10.11.2019 12:00</span>
-                                        </div>
-                                    </div>
-                                    <span class="card__list__item__comment__tag orange">Удовлетворительное</span>
-                                    <span class="card__list__item__comment__tag green">Исполнено</span>
+                                    <button type="button" class="btn btn-main btn-small btn-send ml-3"></button>
                                 </div>
-                                <div class="card__list__item__comment__body">
-                                    <div class="card__list__item__comment__text__control">
-                                        <div class="card__list__item__comment__text__edit"></div>
-                                        <div class="card__list__item__comment__text__delete"></div>
-                                    </div>
-                                    <div class="card__list__item__comment__text">
-                                        Среднее исполнение, в Москве делают лучше
-                                        <div class="card__list__item__comment__attach">
-                                            <div class="image">
-                                                <img src="https://picsum.photos/id/237/100/100" alt="">
-                                            </div>
-                                            <div class="image">
-                                                <img src="https://picsum.photos/id/257/100/100" alt="">
-                                            </div>
-                                            <div class="video">
-                                                <img src="https://picsum.photos/id/227/100/100" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="card__list__item__comment">
-                                <div class="card__list__item__comment__header">
-                                    <div class="card__list__item__comment__card">
-                                        <span class="card__avatar">см</span>
-                                        <div class="card__list__item__comment__name">
-                                            <h2>Соломатин Михаил</h2>
-                                            <span class="card__subtitle">15.11.2019 22:00</span>
-                                        </div>
-                                    </div>
-                                    <span class="card__list__item__comment__tag red">плохое</span>
-                                    <span class="card__list__item__comment__tag red">Не исполнено</span>
-                                </div>
-
-                                <div class="card__list__item__comment__body">
-                                    <div class="card__list__item__comment__text__control active">
-                                        <div class="card__list__item__comment__text__edit"></div>
-                                        <div class="card__list__item__comment__text__delete"></div>
-                                    </div>
-                                    <div class="card__list__item__comment__text">
-                                        Полное безобразие по качеству укладки плитки, не понимаю, как такие работы можно
-                                        было принять!
-                                    </div>
-                                </div>
-
-                            </div>
-                            <button type="button" class="btn btn-third card__list__item__comment__button">Показать все
-                                комментарии
-                            </button>
-                            <div class="card__list__item__comment__add">
-                                <span class="card__avatar">см</span>
-
-                                <div class="card card__list__item__comment__text_container">
-                                    <div class="attach_button">
-                                        <span class="images"></span>
-                                        <span class="video"></span>
-                                    </div>
-                                    <textarea class="card__list__item__comment__textarea" type="text"
-                                              placeholder="Добавьте комментарий"></textarea>
-
-                                    <div class="card__list__item__comment__selectors">
-
-                                        <div class="input_selector mr-3">
-                                            <!--Добавить empty если ни один вариант не выбран-->
-                                            <select>
-                                                <option class="dropdown-item" value="0" disabled selected="selected"
-                                                        hidden>Качество работ
-                                                </option>
-                                                <option class="dropdown-item" value="1">Категория 1</option>
-                                                <option class="dropdown-item" value="2">Категория 2</option>
-                                                <option class="dropdown-item" value="3">Категория 3</option>
-                                                <option class="dropdown-item" value="4">Категория 4</option>
-                                            </select>
-                                        </div>
-                                        <div class="input_selector">
-                                            <!--Добавить empty если ни один вариант не выбран-->
-                                            <select>
-                                                <option class="dropdown-item" value="0" disabled selected="selected"
-                                                        hidden>Сроки работ
-                                                </option>
-                                                <option class="dropdown-item" value="1">Категория 1</option>
-                                                <option class="dropdown-item" value="2">Категория 2</option>
-                                                <option class="dropdown-item" value="3">Категория 3</option>
-                                                <option class="dropdown-item" value="4">Категория 4</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <button type="button" class="btn btn-main btn-small btn-send ml-3"></button>
+                                <label class="checkbox_container">Есть нарушения
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row mt-3">
-            <div class="" style="width: 100%;max-width: 550px; margin-bottom: 3rem">
 
-                <div class="card__list__item__comment__body">
-                    <div class="card__list__item__comment__text__control active">
-                        <div class="card__list__item__comment__text__edit"></div>
-                        <div class="card__list__item__comment__text__delete"></div>
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="card card__list">
+                    <div class="card__list__item" onclick="
+                if (this.classList.contains('active')){
+                 this.classList.remove('active');
+                } else{
+                   this.classList.add('active');
+                }
+                ">
+                        <div class="card__list__item__header">
+                            <span>Покраска фасада</span>
+                            <span class="arrow"></span>
+                        </div>
+                        <div class="card__list__item__content"></div>
                     </div>
-                    <div class="card__list__item__comment__text">
-                        Среднее исполнение, в Москве делают лучше
-                        <div class="card__list__item__comment__attach">
-                            <div class="image">
-                                <img src="https://picsum.photos/id/237/100/100" alt="">
-                            </div>
-                            <div class="image">
-                                <img src="https://picsum.photos/id/257/100/100" alt="">
-                            </div>
-                            <div class="video">
-                                <img src="https://picsum.photos/id/227/100/100" alt="">
+                    <div class="card__list__item" onclick="
+                if (this.classList.contains('active')){
+                 this.classList.remove('active');
+                } else{
+                   this.classList.add('active');
+                }
+                ">
+                        <div class="card__list__item__header">
+                            <span>Роскошь</span>
+                            <span class="arrow"></span>
+                        </div>
+                        <div class="card__list__item__content"></div>
+                    </div>
+                    <div id="opens2" class="card__list__item">
+                        <div class="card__list__item__header" onclick="Dropdown('opens2')">
+                            <span>Завышение стоимости</span>
+                            <span class="arrow"></span>
+                        </div>
+                        <div class="card__list__item__content">
+                            <div class="card__list__item__block">
+                                <div class="card__list__item__comment">
+                                    <div class="card__list__item__comment__header">
+                                        <div class="card__list__item__comment__card">
+                                            <span class="card__avatar">ди</span>
+                                            <div class="card__list__item__comment__name">
+                                                <h2>Долгов Иван</h2>
+                                                <span class="card__subtitle">10.11.2019 12:00</span>
+                                            </div>
+                                        </div>
+                                        <div class="card__list__item__comment__tag__container">
+                                            <span class="card__list__item__comment__tag orange">Удовлетворительное</span>
+                                            <span class="card__list__item__comment__tag green">Исполнено</span>
+                                        </div>
+                                    </div>
+                                    <div class="card__list__item__comment__body">
+                                        <div class="card__list__item__comment__text__control">
+                                            <div class="card__list__item__comment__text__edit"></div>
+                                            <div class="card__list__item__comment__text__delete"></div>
+                                        </div>
+                                        <div class="card__list__item__comment__text">
+                                            Среднее исполнение, в Москве делают лучше
+                                            <div class="card__list__item__comment__attach">
+                                                <div class="image">
+                                                    <img src="https://picsum.photos/id/237/100/100" alt="">
+                                                </div>
+                                                <div class="image">
+                                                    <img src="https://picsum.photos/id/257/100/100" alt="">
+                                                </div>
+                                                <div class="video">
+                                                    <img src="https://picsum.photos/id/227/100/100" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card__list__item__comment">
+                                    <div class="card__list__item__comment__header">
+                                        <div class="card__list__item__comment__card">
+                                            <span class="card__avatar">см</span>
+                                            <div class="card__list__item__comment__name">
+                                                <h2>Соломатин Михаил</h2>
+                                                <span class="card__subtitle">15.11.2019 22:00</span>
+                                            </div>
+                                        </div>
+                                        <div class="card__list__item__comment__tag__container">
+                                            <span class="card__list__item__comment__tag red">плохое</span>
+                                            <span class="card__list__item__comment__tag red">Не исполнено</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="card__list__item__comment__body">
+                                        <div class="card__list__item__comment__text__control active">
+                                            <div class="card__list__item__comment__text__edit"></div>
+                                            <div class="card__list__item__comment__text__delete"></div>
+                                        </div>
+                                        <div class="card__list__item__comment__text">
+                                            Полное безобразие по качеству укладки плитки, не понимаю, как такие работы
+                                            можно
+                                            было принять!
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <button type="button" class="btn btn-third card__list__item__comment__button">Показать
+                                    все
+                                    комментарии
+                                </button>
+                                <div class="card__list__item__comment__add">
+                                    <span class="card__avatar">см</span>
+
+                                    <div class="card card__list__item__comment__text_container">
+                                        <div class="attach_button">
+                                            <span class="images"></span>
+                                            <span class="video"></span>
+                                        </div>
+                                        <textarea class="card__list__item__comment__textarea" type="text"
+                                                  placeholder="Добавьте комментарий"></textarea>
+
+                                        <div class="card__list__item__comment__selectors">
+
+                                            <div class="input_selector mr-3">
+                                                <!--Добавить empty если ни один вариант не выбран-->
+                                                <select>
+                                                    <option class="dropdown-item" value="0" disabled selected="selected"
+                                                            hidden>Качество работ
+                                                    </option>
+                                                    <option class="dropdown-item" value="1">Категория 1</option>
+                                                    <option class="dropdown-item" value="2">Категория 2</option>
+                                                    <option class="dropdown-item" value="3">Категория 3</option>
+                                                    <option class="dropdown-item" value="4">Категория 4</option>
+                                                </select>
+                                            </div>
+                                            <div class="input_selector">
+                                                <!--Добавить empty если ни один вариант не выбран-->
+                                                <select>
+                                                    <option class="dropdown-item" value="0" disabled selected="selected"
+                                                            hidden>Сроки работ
+                                                    </option>
+                                                    <option class="dropdown-item" value="1">Категория 1</option>
+                                                    <option class="dropdown-item" value="2">Категория 2</option>
+                                                    <option class="dropdown-item" value="3">Категория 3</option>
+                                                    <option class="dropdown-item" value="4">Категория 4</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <button type="button" class="btn btn-main btn-small btn-send ml-3"></button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
-            <div class="" style="width: 100%;max-width: 615px; margin-bottom: 3rem">
+        </div>
 
-                <div class="card__list__item__comment__body">
-                    <div class="card__list__item__comment__text__control active">
-                        <img class="card__list__item__comment__text__edit active"
-                             src="img/icons/edit.svg"
-                             alt="">
-                        <img class="card__list__item__comment__text__delete" src="img/icons/delete.svg"
-                             alt="">
-                    </div>
-                    <div class="card__list__item__comment__text edit" style="width: 313px;">
-                        <textarea class="edit_text" type="text"> Среднее исполнение, в Москве делают лучше</textarea>
-                        <div class="card__list__item__comment__attach">
-                            <div class="image">
-                                <img src="https://picsum.photos/id/237/100/100" alt="">
-                            </div>
-                            <div class="image">
-                                <img src="https://picsum.photos/id/257/100/100" alt="">
-                            </div>
-                            <div class="video">
-                                <img src="https://picsum.photos/id/227/100/100" alt="">
-                            </div>
-                            <div class="image_add"></div>
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="" style="width: 100%;max-width: 550px; margin-bottom: 3rem">
+
+                    <div class="card__list__item__comment__body">
+                        <div class="card__list__item__comment__text__control active">
+                            <div class="card__list__item__comment__text__edit"></div>
+                            <div class="card__list__item__comment__text__delete"></div>
                         </div>
-                        <span class="input_form card__list__item__comment__edit_form">
+                        <div class="card__list__item__comment__text">
+                            Среднее исполнение, в Москве делают лучше
+                            <div class="card__list__item__comment__attach">
+                                <div class="image">
+                                    <img src="https://picsum.photos/id/237/100/100" alt="">
+                                </div>
+                                <div class="image">
+                                    <img src="https://picsum.photos/id/257/100/100" alt="">
+                                </div>
+                                <div class="video">
+                                    <img src="https://picsum.photos/id/227/100/100" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="" style="width: 100%;max-width: 615px; margin-bottom: 3rem">
+
+                    <div class="card__list__item__comment__body">
+                        <div class="card__list__item__comment__text__control active">
+                            <img class="card__list__item__comment__text__edit active"
+                                 src="img/icons/edit.svg"
+                                 alt="">
+                            <img class="card__list__item__comment__text__delete" src="img/icons/delete.svg"
+                                 alt="">
+                        </div>
+                        <div class="card__list__item__comment__text edit" style="width: 313px;">
+                            <textarea class="edit_text"
+                                      type="text"> Среднее исполнение, в Москве делают лучше</textarea>
+                            <div class="card__list__item__comment__attach">
+                                <div class="image">
+                                    <img src="https://picsum.photos/id/237/100/100" alt="">
+                                </div>
+                                <div class="image">
+                                    <img src="https://picsum.photos/id/257/100/100" alt="">
+                                </div>
+                                <div class="video">
+                                    <img src="https://picsum.photos/id/227/100/100" alt="">
+                                </div>
+                                <div class="image_add"></div>
+                            </div>
+                            <span class="input_form card__list__item__comment__edit_form">
                             <input type="text" placeholder="Cсылка на YouToobe" value="">
                         </span>
+                        </div>
+                        <button type="button" class="btn btn-main btn-small btn-check ml-3 mt-3"></button>
                     </div>
-                    <button type="button" class="btn btn-main btn-small btn-check ml-3 mt-3"></button>
+
                 </div>
+                <div class="" style="margin-bottom: 3rem">
 
-            </div>
-            <div class="" style="margin-bottom: 3rem">
-
-                <div class="card__list__item__comment__body">
-                    <div class="card__list__item__comment__text__control active">
-                        <div class="card__list__item__comment__text__edit"></div>
-                        <div class="card__list__item__comment__text__delete active"></div>
-                    </div>
-                    <div class="card__list__item__comment__text delete">
-                        Среднее исполнение, в Москве делают лучше
-                        <div class="card__list__item__comment__attach">
-                            <div class="image">
-                                <img src="https://picsum.photos/id/237/100/100" alt="">
-                            </div>
-                            <div class="image">
-                                <img src="https://picsum.photos/id/257/100/100" alt="">
-                            </div>
-                            <div class="video">
-                                <img src="https://picsum.photos/id/227/100/100" alt="">
+                    <div class="card__list__item__comment__body">
+                        <div class="card__list__item__comment__text__control active">
+                            <div class="card__list__item__comment__text__edit"></div>
+                            <div class="card__list__item__comment__text__delete active"></div>
+                        </div>
+                        <div class="card__list__item__comment__text delete">
+                            Среднее исполнение, в Москве делают лучше
+                            <div class="card__list__item__comment__attach">
+                                <div class="image">
+                                    <img src="https://picsum.photos/id/237/100/100" alt="">
+                                </div>
+                                <div class="image">
+                                    <img src="https://picsum.photos/id/257/100/100" alt="">
+                                </div>
+                                <div class="video">
+                                    <img src="https://picsum.photos/id/227/100/100" alt="">
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <span class="card__list__item__comment__text__confirm">
+                    <span class="card__list__item__comment__text__confirm">
                         <span>Вы точно хотите удалить комментарий?</span>
                         <div class="yes"></div>
                         <div class="no"></div>
                 </span>
+                </div>
             </div>
         </div>
-        <div class="row mt-3">
-            <div class="card card__map card__map__full">
-                <button type="button" class="btn btn-main btn-small btn-size full_button"></button>
-                <img src="img/map.jpg" alt="">
-            </div>
-            <div class="col-4">
 
-                <div class="card__map__small_mark full mb-5 mr-3">17</div>
-                <div class="card__map__small_mark half mb-5 mr-3">17</div>
-                <div class="card__map__small_mark third mb-5 mr-3">17</div>
-                <div class="card__map__small_mark four mb-5 mr-3">17</div>
-                <br>
-                <div class="card__map__big_mark gray mb-5">
-                    Поставка мультимедийного оборудования
-                    <span class="card__map__price">16 700 000,00 рублей</span>
-                </div>
-                <div class="card__map__big_mark orange mb-5">
-                    Поставка мультимедийного оборудования
-                    <span class="card__map__price">16 700 000,00 рублей</span>
-                </div>
-                <div class="card__map__big_mark red mb-5">
-                    Поставка мультимедийного оборудования
-                    <span class="card__map__price">16 700 000,00 рублей</span>
-                </div>
-                <div class="card__map__big_mark green mb-5">
-                    Поставка мультимедийного оборудования
-                    <span class="card__map__price">16 700 000,00 рублей</span>
-                </div>
-            </div>
-        </div>
         <div class="row mt-3">
-            <div style="width: 530px;display: inline-block;">
-                <div class="card card__map">
-                    <div class="card__map__header">
-                        <h2>Адрес закупки</h2>
-                        <p>улица Фрунзе, 88, Новосибирск, Новосибирская область, Россия, 630005</p>
+            <div class="col-12">
+                <div class="card card__map card__map__full">
+                    <button type="button" class="btn btn-main btn-small btn-size full_button"></button>
+                    <img src="img/map.jpg" alt="">
+                </div>
+                <div class="col-4">
+
+                    <div class="card__map__small_mark full mb-5 mr-3">17</div>
+                    <div class="card__map__small_mark half mb-5 mr-3">17</div>
+                    <div class="card__map__small_mark third mb-5 mr-3">17</div>
+                    <div class="card__map__small_mark four mb-5 mr-3">17</div>
+                    <br>
+                    <div class="card__map__big_mark gray mb-5">
+                        Поставка мультимедийного оборудования
+                        <span class="card__map__price">16 700 000,00 рублей</span>
                     </div>
-                    <img src="img/map.jpg" style="height: 330px;" alt="">
-                    <!--Тут должна быть карта со строго фиксироваными размерами-->
-                    <div class="button_container">
-                        <button type="button" class="btn btn-second mt-auto bottom_button">Нарисовать область</button>
+                    <div class="card__map__big_mark orange mb-5">
+                        Поставка мультимедийного оборудования
+                        <span class="card__map__price">16 700 000,00 рублей</span>
+                    </div>
+                    <div class="card__map__big_mark red mb-5">
+                        Поставка мультимедийного оборудования
+                        <span class="card__map__price">16 700 000,00 рублей</span>
+                    </div>
+                    <div class="card__map__big_mark green mb-5">
+                        Поставка мультимедийного оборудования
+                        <span class="card__map__price">16 700 000,00 рублей</span>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="row mt-3">
-            <div style="width: 530px;display: inline-block;">
-                <div class="card card__map">
-                    <div class="card__map__header">
-                        <p>Haселенный пункт, улица, дом <span class="notion">*</span></p>
-                        <span class="input_form">
+            <div class="col-12">
+                <div style="max-width: 530px;display: inline-block;">
+                    <div class="card card__map">
+                        <div class="card__map__header">
+                            <h2>Адрес закупки</h2>
+                            <p>улица Фрунзе, 88, Новосибирск, Новосибирская область, Россия, 630005</p>
+                        </div>
+                        <img src="img/map.jpg" style="height: 330px;" alt="">
+                        <!--Тут должна быть карта со строго фиксироваными размерами-->
+                        <div class="button_container">
+                            <button type="button" class="btn btn-second mt-auto bottom_button">Нарисовать область
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-12">
+                <div style="max-width: 530px;display: inline-block;">
+                    <div class="card card__map">
+                        <div class="card__map__header">
+                            <p>Haселенный пункт, улица, дом <span class="notion">*</span></p>
+                            <span class="input_form">
                             <span id="txt3" class="label">Добавьте населенный пункт</span>
                             <input id="inputTxt3" type="text" value="" onchange="txtInput('txt2','inputTxt2')">
                 </span>
-                    </div>
-                    <img src="img/map.jpg" style="height: 330px;" alt="">
-                    <!--Тут должна быть карта со строго фиксироваными размерами-->
-                    <div class="button_container">
-                        <button type="button" class="btn btn-second mt-auto bottom_button mark_button"></button>
-                        <button type="button" class="btn btn-second mt-auto bottom_button mark_button__save">Сохранить
-                        </button>
+                        </div>
+                        <img src="img/map.jpg" style="height: 330px;" alt="">
+                        <!--Тут должна быть карта со строго фиксироваными размерами-->
+                        <div class="button_container">
+                            <button type="button" class="btn btn-second mt-auto bottom_button mark_button"></button>
+                            <button type="button" class="btn btn-second mt-auto bottom_button mark_button__save">
+                                Сохранить
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
     </div>
 </main>
 
@@ -842,7 +924,6 @@
     document.addEventListener("DOMContentLoaded", txtInput('txtCalendar', 'txtInputCalendar'));
     document.addEventListener("DOMContentLoaded", Dropdown('opens'));
     document.addEventListener("DOMContentLoaded", Dropdown('opens2'));
-
 
 
 </script>
