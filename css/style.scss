@@ -94,6 +94,22 @@ h3 {
   font-size: 12pt;
 }
 
+.clock{
+  display: inline-block;
+  height: 10pt;
+  width: 10pt;
+  @include clock('000000');
+  &.green{
+    @include clock('00983a');
+  }
+  &.red{
+    @include clock('e32118');
+  }
+  &.orange{
+    @include clock('f9b233');
+  }
+}
+
 .note {
   color: $gray;
 }
