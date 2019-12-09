@@ -101,7 +101,7 @@
       height: 8px;
       width: 13px;
       content: "";
-      @include dropdown(bdbdbd);
+      @include dropdown('bdbdbd');
       @media (max-width: $md) {
           display: none;
       }

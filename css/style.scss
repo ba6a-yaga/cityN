@@ -166,6 +166,16 @@ h3 {
   color: $blue;
   box-shadow: none;
   font-size: 10pt;
+  &.back{
+    &:before{
+      content: '';
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      @include back('3090BB');
+      margin-right:20px ;
+    }
+  }
   &:hover {
     color: $blue;
     box-shadow: none;
@@ -204,7 +214,7 @@ h3 {
     width: 13px;
     position: absolute;
     content: "";
-    @include size(ffffff);
+    @include size('ffffff');
   }
 }
 
@@ -216,7 +226,7 @@ h3 {
     width: 14px;
     position: absolute;
     content: "";
-    @include send(ffffff);
+    @include send('ffffff');
   }
 }
 
@@ -228,7 +238,7 @@ h3 {
     width: 20px;
     position: absolute;
     content: "";
-    @include check(ffffff);
+    @include check('ffffff');
   }
 }
 
@@ -240,7 +250,7 @@ h3 {
     width: 13px;
     position: absolute;
     content: "";
-    @include close(ffffff);
+    @include close('ffffff');
   }
 }
 
