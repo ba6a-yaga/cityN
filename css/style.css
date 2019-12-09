@@ -452,6 +452,25 @@
   position: relative;
   width: 100%;
   border: 1px solid rgba(0, 0, 0, 0.125); }
+  .card__info {
+    padding: 23px 30px;
+    margin-bottom: 10px; }
+    .card__info__container h1 {
+      margin-bottom: 53px; }
+    .card__info__container h2 {
+      margin-bottom: 26px; }
+    .card__info:last-child {
+      margin-bottom: 0; }
+    .card__info h3 {
+      font-weight: bold;
+      font-size: 12pt; }
+    .card__info p {
+      font-size: 10pt; }
+    @media (max-width: 576px) {
+      .card__info h3 {
+        font-size: 14pt; }
+      .card__info p {
+        font-size: 12pt; } }
   .card__registration {
     max-width: 350px;
     margin: 0 auto; }
@@ -509,6 +528,10 @@
     flex-direction: row;
     justify-content: space-between;
     margin-top: auto; }
+  .card__text .role {
+    font-size: 10pt;
+    color: #bdbdbd;
+    margin: 0; }
   .card__text h2 {
     color: #3090bb;
     font-size: 10pt;
@@ -583,8 +606,7 @@
     justify-content: start; }
   .card__list {
     padding: 0;
-    width: 100%;
-    max-width: 530px; }
+    width: 100%; }
     .card__list__item {
       display: flex;
       justify-content: space-between;
@@ -1239,7 +1261,7 @@ h1 {
   font-size: 16pt; }
 
 h2 {
-  font-size: 14pt; }
+  font-size: 13pt; }
 
 h3 {
   font-size: 12pt; }
@@ -1263,6 +1285,9 @@ h3 {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23f9b233; %7D %3C/style%3E%3C/defs%3E%3Ctitle%3Eclock%3C/title%3E%3Cg id='╨б╨╗╨╛╨╣_2' data-name='╨б╨╗╨╛╨╣ 2'%3E%3Cg id='UI-kit'%3E%3Cg id='Body'%3E%3Cpath class='cls-1' d='M7,0a7,7,0,1,0,7,7A7,7,0,0,0,7,0Zm3.47107,8.73633a.75121.75121,0,0,1-1.00684.335L6.66443,7.6709A.74973.74973,0,0,1,6.25037,7V2.7998a.75.75,0,1,1,1.5,0V6.53613l2.38574,1.19336A.75049.75049,0,0,1,10.47107,8.73633Z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
     background-size: contain;
     background-repeat: no-repeat; }
+
+.black {
+  color: #000000 !important; }
 
 .note {
   color: #bdbdbd; }
@@ -1313,7 +1338,7 @@ h3 {
   .btn-third.back:before {
     content: '';
     display: inline-block;
-    width: 10px;
+    width: 14px;
     height: 10px;
     background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 14 8.2' style='enable-background:new 0 0 14 8.2;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;stroke:%233090BB;stroke-miterlimit:10;%7D .st1%7Bfill:%233090BB;%7D%0A%3C/style%3E%3Cg%3E%3Cg%3E%3Cline class='st0' x1='14' y1='4.1' x2='1.1' y2='4.1'/%3E%3Cg%3E%3Cpolygon class='st1' points='4.4,0 5.1,0.7 1.5,4.1 5.1,7.4 4.4,8.2 0,4.1 '/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
     background-size: contain;
@@ -1452,5 +1477,19 @@ h3 {
   color: red;
   font-size: 10pt;
   line-height: -1; }
+
+.link_buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; }
+  .link_buttons .links, .link_buttons .buttons {
+    margin-bottom: 10px; }
+  .link_buttons .see_tab {
+    width: 14px; }
+  @media (max-width: 576px) {
+    .link_buttons {
+      flex-direction: column;
+      align-items: start; } }
 
 /*# sourceMappingURL=style.css.map */

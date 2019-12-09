@@ -87,27 +87,31 @@ h1 {
 }
 
 h2 {
-  font-size: 14pt;
+  font-size: 13pt;
 }
 
 h3 {
   font-size: 12pt;
 }
 
-.clock{
+.clock {
   display: inline-block;
   height: 10pt;
   width: 10pt;
   @include clock('000000');
-  &.green{
+  &.green {
     @include clock('00983a');
   }
-  &.red{
+  &.red {
     @include clock('e32118');
   }
-  &.orange{
+  &.orange {
     @include clock('f9b233');
   }
+}
+
+.black {
+  color: #000000 !important;
 }
 
 .note {
@@ -166,14 +170,14 @@ h3 {
   color: $blue;
   box-shadow: none;
   font-size: 10pt;
-  &.back{
-    &:before{
+  &.back {
+    &:before {
       content: '';
       display: inline-block;
-      width: 10px;
+      width: 14px;
       height: 10px;
       @include back('3090BB');
-      margin-right:20px ;
+      margin-right: 20px;
     }
   }
   &:hover {
@@ -334,4 +338,21 @@ h3 {
   color: red;
   font-size: 10pt;
   line-height: -1;
+}
+
+.link_buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  .links,.buttons{
+    margin-bottom: 10px
+  }
+  .see_tab {
+    width: 14px;
+  }
+  @media(max-width: $sm){
+    flex-direction: column;
+    align-items: start;
+  }
 }
