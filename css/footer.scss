@@ -1,9 +1,9 @@
 .footer {
-  color: $white;
-  background-color: $dark_brown;
+  color: var(--white);
+  background-color: var(--dark_brown);
   padding: 50px 0 75px 0;
   hr {
-    background-color: $white;
+    background-color: var(--white);
     margin: 35px 0;
   }
   &__sub_txt {
@@ -17,7 +17,7 @@
     max-width: 280px;
     font-size: 10pt;
     a {
-      color: $white;
+      color: var(--white);
     }
   }
   &__policy {

@@ -3,7 +3,30 @@
   margin: 0;
   display: inline-block;
   width: 100%;
-
+  &__work{
+    padding-right: 40px;
+    margin: 10px 0;
+    &:after{
+      content: '';
+      width: 30px;
+      height: 30px;
+      display: inline-block;
+      position: absolute;
+      top:13px;
+      right: 0;
+      cursor: pointer;
+    }
+    &.delete{
+      &:after {
+        @include delete(bdbdbd);
+      }
+    }
+    &.add{
+      &:after {
+        @include add_mark(bdbdbd);
+      }
+    }
+  }
   input, textarea {
     border: 1px solid #dadada;
     padding: 18px 13px 5px 13px;
@@ -19,15 +42,15 @@
       transition-duration: 300ms;
     }
     &:invalid {
-      border: 1px solid $red;
+      border: 1px solid var(--red);
       transition-duration: 300ms;
       box-shadow: none;
     }
     &.empty {
-      color: $gray;
+      color: var(--gray);
       font-size: 10pt;
       &:focus {
-        color: $blue;
+        color: var(--blue);
         transition-duration: 300ms;
       }
     }
@@ -40,7 +63,7 @@
 
   &:focus-within {
     .label {
-      color: $blue;
+      color: var(--blue);
       transition-duration: 300ms;
       font-size: 8pt;
       top: 10px;
@@ -49,7 +72,7 @@
 
   .label {
     position: absolute;
-    color: $gray;
+    color: var(--gray);
     transition-duration: 300ms;
     left: 13px;
     font-size: 10pt;
@@ -57,16 +80,12 @@
   }
 
   .full {
-    color: $gray;
+    color: var(--gray);
     transition-duration: 300ms;
     font-size: 8pt;
     top: 10px;
   }
 
-  .sub_txt {
-    color: $gray;
-    font-size: 9pt;
-  }
 
   .see {
     &:after {
@@ -109,10 +128,10 @@
   }
   &.error {
     .full {
-      color: $red;
+      color: var(--red);
     }
     .sub_txt {
-      color: $red;
+      color: var(--red);
     }
   }
 }
@@ -181,7 +200,7 @@
 
 .input_selector.disabled,
 .disabled .input_selector {
-  background-color: $gray;
+  background-color: var(--gray);
   border-color: #f0f0f0;
 
   &:after {
@@ -212,10 +231,10 @@
 
 .empty {
   select {
-    color: $gray;
+    color: var(--gray);
     font-size: 10pt;
     &:hover {
-      color: $blue;
+      color: var(--blue);
       transition-duration: 300ms;
     }
   }
@@ -223,8 +242,20 @@
 }
 
 .disable {
+  &:hover{
+    border-color: var(--border-gray);
+    color: var(--gray);
+  }
   input {
-    background-color: $middle_gray;
+    background-color: var(--middle_gray);
+  }
+  select{
+    color: var(--gray);
+    background-color: var(--middle_gray);
+    &:hover{
+      border-color: var(--border-gray);
+      color: var(--gray);
+    }
   }
 }
 
@@ -260,7 +291,7 @@
     height: 23px;
     width: 23px;
     background-color: transparent;
-    border: 1px solid $red;
+    border: 1px solid var(--red);
     border-radius: 6px;
     &:after {
       position: absolute;

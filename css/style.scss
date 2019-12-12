@@ -1,4 +1,5 @@
 $gray: #bdbdbd;
+$border-gray: #dfdfdf;
 $light_gray: #f5f5f6;
 $extra_light_gray: #f8f8f8;
 $middle_gray: #f5f5f7;
@@ -19,6 +20,22 @@ $md: 768px;
 @import "header";
 @import "footer";
 @import "card";
+
+:root {
+  --gray: #bdbdbd;
+  --border-gray: #dfdfdf;
+  --light_gray: #f5f5f6;
+  --extra_light_gray: #f8f8f8;
+  --middle_gray: #f5f5f7;
+  --white: #ffffff;
+  --blue: #3090bb;
+  --dark_blue: #2881a0;
+  --red: #e32118;
+  --dark_red: #cf1314;
+  --green: #00983a;
+  --orange: #f9b233;
+  --dark_brown: #282423;
+}
 
 @font-face {
   font-family: 'Conv_regular';
@@ -47,7 +64,7 @@ main {
 body {
   font-family: 'Conv_regular', Arial, Helvetica, sans-serif;
   font-size: 10pt;
-  background-color: $extra_light_gray;
+  background-color: var(--extra_light_gray);
   line-height: 1.1;
   display: flex;
   justify-content: start;
@@ -61,25 +78,29 @@ footer {
 a {
   font-family: 'Conv_medium', Arial, Helvetica, sans-serif;
   font-weight: bold;
-  color: $blue;
+  color: var(--blue);
   text-decoration: none;
   cursor: pointer;
   transition-duration: 300ms;
   &:hover {
-    color: $blue;
+    color: var(--blue);
     text-decoration: underline;
     transition-duration: 300ms;
   }
   &:active {
-    color: $dark_blue;
+    color: var(--dark_blue);
     text-decoration: underline;
     transition-duration: 300ms;
   }
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: 'Conv_medium', Arial, Helvetica, sans-serif;
   font-weight: bold;
+  .sub_txt {
+    display: block;
+    margin-top: 15px;
+  }
 }
 
 h1 {
@@ -110,34 +131,51 @@ h3 {
   }
 }
 
+.add_button {
+  display: flex;
+  align-items: center;
+  .btn-main {
+    @media(max-width: $sm) {
+      padding: 10px 16px;
+    }
+  }
+}
+
 .black {
   color: #000000 !important;
 }
 
 .note {
-  color: $gray;
+  color: var(--gray);
+}
+
+.price {
+  margin-top: 26px;
+  @media(max-width: $sm) {
+    margin-top: 0px;
+  }
 }
 
 .tag {
   font-size: 7pt;
-  color: $orange;
+  color: var(--orange);
   font-weight: bold;
 }
 
 .btn-main {
   color: #fff;
-  background-color: $red;
-  border-color: $red;
+  background-color: var(--red);
+  border-color: var(--red);
   border-radius: 8em;
   padding: 10px 37px;
   font-size: 10pt;
   transition-duration: 300ms;
   box-shadow: 0px 7px 15px 0px rgba(227, 33, 24, .3);
   &:hover {
-    background-color: $dark_red;
+    background-color: var(--dark_red);
     color: #fff;
     transition-duration: 300ms;
-    border-color: $red;
+    border-color: var(--red);
   }
   &:focus {
     box-shadow: 0px 7px 15px 0px rgba(227, 33, 24, .3);
@@ -145,16 +183,16 @@ h3 {
 }
 
 .btn-second {
-  background-color: $middle_gray;
+  background-color: var(--middle_gray);
   border-color: #dadada;
-  color: $blue;
+  color: var(--blue);
   border-radius: 8em;
   padding: 10px 37px;
   font-size: 10pt;
   box-shadow: none;
   &:hover {
     background-color: #e3e3e5;
-    color: $blue;
+    color: var(--blue);
     box-shadow: none;
   }
   &:active {
@@ -167,7 +205,7 @@ h3 {
 }
 
 .btn-third {
-  color: $blue;
+  color: var(--blue);
   box-shadow: none;
   font-size: 10pt;
   &.back {
@@ -181,7 +219,7 @@ h3 {
     }
   }
   &:hover {
-    color: $blue;
+    color: var(--blue);
     box-shadow: none;
     text-decoration: underline;
   }
@@ -259,28 +297,35 @@ h3 {
 }
 
 .btn-disabled {
-  background-color: $middle_gray;
-  color: $gray;
+  background-color: var(--middle_gray);
+  color: var(--gray);
   border: 1px solid #dadada;
   box-shadow: none;
   &:hover {
-    background-color: $middle_gray;
-    color: $gray;
+    background-color: var(--middle_gray);
+    color: var(--gray);
     border: 1px solid #dadada;
     box-shadow: none;
   }
 }
 
+.sub_txt {
+  color: var(--gray);
+  font-size: 9pt;
+}
+
 .tab {
   border: 1px solid #dadada;
   color: #bebebe;
-  display: inline-flex;
+  display: flex;
   border-radius: 20px;
   font-size: 11pt;
   .tab-link {
     border-color: #dee2e6 #dee2e6 #dee2e6 #dee2e6;
     background-color: #fff;
     padding: 21px;
+    flex: 1;
+    text-align: center;
     &:first-child {
       border-radius: 20px 0 0 20px;
       border-right: 1px solid #dadada;
@@ -345,13 +390,13 @@ h3 {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  .links,.buttons{
+  .links, .buttons {
     margin-bottom: 10px
   }
   .see_tab {
     width: 14px;
   }
-  @media(max-width: $sm){
+  @media(max-width: $sm) {
     flex-direction: column;
     align-items: start;
   }
