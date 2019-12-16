@@ -37,7 +37,7 @@
     padding: 18px 13px 5px 13px;
     border-radius: 20px;
     width: 100%;
-    color: #000000;
+    color: var(--black);
     height: 60px;
     font-size: 12pt;
     transition-duration: 300ms;
@@ -174,7 +174,7 @@
   select {
     padding: 21px 10px 21px 10px;
     width: 100%;
-    color: #000;
+    color: var(--black);
     border: none;
     border-radius: 0;
     box-shadow: none;

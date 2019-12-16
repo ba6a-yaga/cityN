@@ -31,7 +31,7 @@
     padding: 18px 13px 5px 13px;
     border-radius: 20px;
     width: 100%;
-    color: #000000;
+    color: var(--black);
     height: 60px;
     font-size: 12pt;
     transition-duration: 300ms; }
@@ -143,7 +143,7 @@
   .input_selector select {
     padding: 21px 10px 21px 10px;
     width: 100%;
-    color: #000;
+    color: var(--black);
     border: none;
     border-radius: 0;
     box-shadow: none;
@@ -359,7 +359,7 @@
           border-top: 1px solid #dadada;
           transition-duration: 300ms; }
         .header__dropdown__menu__item:active {
-          color: #000; }
+          color: var(--black); }
         .header__dropdown__menu__item:first-child {
           border-top: none; }
         .header__dropdown__menu__item:last-child {
@@ -633,6 +633,7 @@
     color: var(--gray);
     font-size: 10pt; }
   .card__small {
+    height: 100%;
     padding: 10px 20px;
     width: 100%;
     position: relative; }
@@ -742,7 +743,7 @@
               top: 12px; }
         .card__list__item__comment__textarea {
           width: 100%;
-          color: #000;
+          color: var(--black);
           border: none;
           resize: none;
           font-size: 10pt; }
@@ -867,7 +868,7 @@
         .card__list__item__comment__tag {
           text-transform: uppercase;
           padding: 5px 10px;
-          border: 1px solid #000000;
+          border: 1px solid var(--black);
           border-radius: 20px;
           font-size: 6pt;
           margin-left: 10px; }
@@ -1244,7 +1245,7 @@
       background-color: #fff;
       padding: 5px 13px;
       border-radius: 50px;
-      border: 3px solid #000;
+      border: 3px solid var(--black);
       position: relative;
       white-space: nowrap; }
       .card__map__big_mark:after {
@@ -1257,8 +1258,8 @@
         left: calc(50% - 5px);
         transform: rotate(45deg);
         background-color: #ffffff;
-        border-bottom: 3px solid #000;
-        border-right: 3px solid #000; }
+        border-bottom: 3px solid var(--black);
+        border-right: 3px solid var(--black); }
       .card__map__big_mark.gray {
         border: 3px solid var(--gray); }
         .card__map__big_mark.gray:after {
@@ -1296,7 +1297,8 @@
   --dark_red: #cf1314;
   --green: #00983a;
   --orange: #f9b233;
-  --dark_brown: #282423; }
+  --dark_brown: #282423;
+  --black: #000000; }
 
 @font-face {
   font-family: 'Conv_regular';
@@ -1360,6 +1362,9 @@ h2 {
 h3 {
   font-size: 12pt; }
 
+.account h2 {
+  margin-bottom: 2rem; }
+
 .clock {
   display: inline-block;
   height: 10pt;
@@ -1388,7 +1393,7 @@ h3 {
       padding: 10px 16px; } }
 
 .black {
-  color: #000000 !important; }
+  color: var(--black) !important; }
 
 .note {
   color: var(--gray); }
@@ -1553,7 +1558,7 @@ h3 {
       border-radius: 0 20px 20px 0; }
   .tab .active {
     background-color: #e6f0f2;
-    color: #000000 !important;
+    color: var(--black) !important;
     transition-duration: 300ms; }
     .tab .active:hover {
       background-color: #dee9eb;
@@ -1585,6 +1590,32 @@ h3 {
   border: 1px dashed #dadada;
   padding: 40px 14px;
   display: inline-block; }
+
+.photo {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px; }
+  .photo:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%; }
+  .photo .content {
+    position: absolute;
+    width: 100%;
+    height: 100%; }
+  .photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    border: 1px solid var(--extra_light_gray); }
+  .photo .change_button {
+    color: var(--white);
+    cursor: pointer;
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    text-shadow: 1px 1px 2px var(--black); }
 
 .notion {
   color: red;

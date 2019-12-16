@@ -126,7 +126,7 @@
           transition-duration: 300ms;
         }
         &:active {
-          color: #000;
+          color: var(--black);
         }
         &:first-child {
           border-top: none;

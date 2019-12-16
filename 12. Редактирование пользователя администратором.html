@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>11. Личный кабинет — пользователь</title>
+    <title>12. Редактирование пользователя администратором</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -115,13 +115,11 @@
             <button type="button" class="btn btn-third back mr-4">Вход/регистрация</button>
         </div>
         <div class="row">
-
             <div class="col-12 col-lg-6 card__info__container">
                 <h1>Личный кабинет</h1>
             </div>
         </div>
-        <div class="row">
-
+        <div class="row mb-4">
             <div class="col-12">
                 <h2>Основная информация</h2>
                 <div class="card card__account mb-5">
@@ -190,22 +188,104 @@
                         </div>
                         <div class="col-12 col-md-4 col-lg-3">
                             <h3>Фотография</h3>
-                            <div class="photo_load">
-                                <p>Вы можете добавить фото объемом максимум 5 Мб. в формате .jpg или .png</p>
-                                <a class="mt-1" href="#">Загрузить фото</a>
+                            <div class="photo">
+                                <div class="content">
+                                    <img src="https://picsum.photos/200" alt="">
+                                    <div class="change_button">Изменить фото</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
-        <div class="row">
-            <div class="col-12 add_button">
-                <button type="button" class="btn btn-main btn-disabled ml-4">Сохранить изменения</button>
+        <div class="row mb-4">
+            <div class="col-12">
+                <h2>Закупки, созданные пользователем</h2>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card card__small">
+                            <div class="card__text">
+                                <span class="card__text__number">№0851200000619005395</span>
+                                <p class="card__text__subtitle gray">Поставка</p>
+                                <p class="card__text__content">Поставка аппарата близкофокусной рентгенотерапии в рамках реализации мероприятия «Переоснащение 3 медици...</p>
+                                <p class="card__text__price">2 500 000,00 <span class="card__subtitle">руб.</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="card card__small">
+                            <div class="card__text">
+                                <span class="card__text__number">№31908499433</span>
+                                <p class="card__text__subtitle gray">Поставка</p>
+                                <p class="card__text__content">Организация питания школьников по заданию</p>
+                                <p class="card__text__price">963 200,00 <span class="card__subtitle">руб.</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="card card__small">
+                            <div class="card__text">
+                                <span class="card__text__number">№0813500000119015265</span>
+                                <p class="card__text__subtitle gray">Поставка</p>
+                                <p class="card__text__content">Приобретение жилого помещения в виде квартиры в собственность Удмуртской Республики для формирования специал...</p>
+                                <p class="card__text__price">1 576 991,00  <span class="card__subtitle">руб.</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
+        <div class="row mb-5">
+            <div class="col-12">
+                <h2>Закупки на мониторинге</h2>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card card__small">
+                            <div class="card__text">
+                                <span class="card__text__number">№0851200000619005395</span>
+                                <p class="card__text__subtitle gray">Поставка</p>
+                                <p class="card__text__content">Поставка аппарата близкофокусной рентгенотерапии в рамках реализации мероприятия «Переоснащение 3 медици...</p>
+                                <p class="card__text__price">2 500 000,00 <span class="card__subtitle">руб.</span></p>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="col-4">
+                        <div class="card card__small">
+                            <div class="card__text">
+                                <span class="card__text__number">№31908499433</span>
+                                <p class="card__text__subtitle gray">Поставка</p>
+                                <p class="card__text__content">Организация питания школьников по заданию</p>
+                                <p class="card__text__price">963 200,00 <span class="card__subtitle">руб.</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="card card__small">
+                            <div class="card__text">
+                                <span class="card__text__number">№0813500000119015265</span>
+                                <p class="card__text__subtitle gray">Поставка</p>
+                                <p class="card__text__content">Приобретение жилого помещения в виде квартиры в собственность Удмуртской Республики для формирования специал...</p>
+                                <p class="card__text__price">1 576 991,00  <span class="card__subtitle">руб.</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-12 add_button">
+                <button type="button" class="btn btn-main ml-4">Сохранить изменения</button>
+                <button type="button" class="btn btn-second ml-4">Заблокировать</button>
+                <button type="button" class="btn btn-third ml-4">Отмена</button>
+            </div>
+        </div>
     </div>
     </div>
 </main>
