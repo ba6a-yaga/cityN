@@ -4,6 +4,8 @@
   margin: 0;
   display: inline-block;
   width: 100%; }
+  .input_form.notips input, .input_form.notips textarea {
+    padding: 13px; }
   .input_form__work {
     padding-right: 40px;
     margin: 10px 0; }
@@ -47,6 +49,8 @@
       .input_form input.empty:focus, .input_form textarea.empty:focus {
         color: var(--blue);
         transition-duration: 300ms; }
+    .input_form input::placeholder, .input_form textarea::placeholder {
+      color: #b9b9b9; }
   .input_form textarea {
     resize: none;
     overflow: hidden; }
@@ -478,6 +482,16 @@
   position: relative;
   width: 100%;
   border: 1px solid var(--border-gray); }
+  .card__account {
+    padding: 30px 30px; }
+    @media (max-width: 1200px) {
+      .card__account {
+        padding: 30px 15px; } }
+    .card__account h3 {
+      white-space: nowrap; }
+    @media (max-width: 1200px) {
+      .card__account__column {
+        margin-bottom: 1rem; } }
   .card__tips {
     padding: 80px 30px 30px 30px; }
     .card__tips p {

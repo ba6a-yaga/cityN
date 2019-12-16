@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Registration</title>
+    <title>11. Личный кабинет — пользователь</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -108,39 +108,109 @@
     </div>
 
 </header>
+
 <main role="main">
     <div class="container">
+        <div class="row mb-2">
+            <button type="button" class="btn btn-third back mr-4">Вход/регистрация</button>
+        </div>
         <div class="row">
-            <div class="card card__registration">
-                <div class="card__registration__header">
-                    <div class="card__registration__logo">
-                        <img src="img/logo/cityN.svg" alt="">
-                        <img src="img/logo/z4z.svg" alt="">
-                    </div>
-                    <div class="card__registration__tab">
-                        <div class="element">Подтверждение регистрации</div>
-                    </div>
-                </div>
-                <div class="card__registration__content">
-                    <p class="personal mb-4">Для восстановления пароля введите свою электронную почту, указанную при
-                        регистрации. <br>
-                        После получения письма, вам необходимо будет перейти по ссылке в письме.</p>
-                    <span class="input_form error">
-                        <span id="txtAlert" class="label full">Электронная почта</span>
-                        <input id="inputTxtAlert" type="email" value="solomatin123">
-                        <span class="sub_txt">Текстовое предупреждение об ошибке ввода</span>
-                    </span>
 
-                    <div class="card__registration__buttons">
-                        <button type="button" class="btn btn-main">Отправить</button>
-                        <button type="button" class="btn btn-third">Отмена</button>
-                    </div>
-
-                </div>
+            <div class="col-12 col-lg-6 card__info__container">
+                <h1>Личный кабинет</h1>
             </div>
         </div>
+        <div class="row">
+
+            <div class="col-12">
+                <h2>Основная информация</h2>
+                <div class="card card__account mb-5">
+                    <div class="row">
+                        <div class="col-12 col-lg-6 col-xl-5">
+                            <div class="row card__account__column">
+                                <div class="col-12 mb-3">
+                                    <h3>ФИО <span class="notion">*</span></h3>
+                                    <span class="input_form">
+                                        <span class="label">Введите свою фамилию, имя и отчество</span>
+                                        <input type="text" value="">
+                                        <span class="sub_txt d-none">&emsp;</span>
+                                    </span>
+                                </div>
+                                <div class="col-12 col-md-7 card__account__column">
+                                    <h3>Email <span class="notion">*</span>
+                                        <button type="button" class="btn btn-third p-0">Изменить email</button>
+                                    </h3>
+                                    <span class="input_form error mr-3">
+                                            <span id="txtAlert" class="label">Электронная почта</span>
+                                            <input id="inputTxtAlert" type="email" value=""
+                                                   onchange="txtInput('txtAlert','inputTxtAlert')">
+                                            <span class="sub_txt d-none">Текстовое предупреждение об ошибке ввода</span>
+                                        </span>
+                                </div>
+                                <div class="col-12 col-md-5">
+                                    <h3>Номер телефона <span class="notion">*</span></h3>
+                                    <span class="input_form notips">
+                                        <input type="text" value="" placeholder="+7(">
+                                        <span class="sub_txt d-none">&emsp;</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-8 col-lg-6 col-xl-4">
+                            <div class="row">
+                                <div class="col-12 col-md-6 mb-3">
+                                    <h3>Пол <span class="notion">*</span></h3>
+                                    <div class="tab">
+                                        <a class="tab-link active">М</a>
+                                        <a class="tab-link ">Ж</a>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 card__account__column">
+                                    <h3>Дата рождения <span class="notion">*</span></h3>
+                                    <span class="input_form">
+                                        <span class="calendar"></span>
+                                        <span id="txtCalendar" class="label">Введите дату</span>
+                                        <input id="txtInputCalendar" type="text"
+                                               onchange="txtInput('txtCalendar','txtInputCalendar')">
+                                        <span class="sub_txt d-none">Текстовaя подсказка для формы ввода</span>
+                                    </span>
+                                </div>
+                                <div class="col-12 card__account__column">
+                                    <h3>Пароль <span class="notion">*</span>
+                                        <button type="button" class="btn btn-third p-0">Изменить пароль</button>
+                                    </h3>
+                                    <span class="input_form mr-3">
+                                        <span class="see"></span>
+                                            <span id="txtPass" class="label">Введите пароль</span>
+                                            <input class="" id="inputTxtPass" type="password" value="">
+                                            <span class="sub_txt d-none">&emsp;</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 col-lg-3">
+                            <h3>Фотография</h3>
+                            <div class="photo_load">
+                                <p>Вы можете добавить фото объемом максимум 5 Мб. в формате .jpg или .png</p>
+                                <a class="mt-1" href="#">Загрузить фото</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 add_button">
+                        <button type="button" class="btn btn-main btn-disabled ml-4">Сохранить изменения</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
     </div>
 </main>
+
 <footer class="footer">
     <div class="container">
         <div class="row justify-content-between">
