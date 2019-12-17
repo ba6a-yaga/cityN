@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>17. Нет закупок</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<header>
+    <div class="navbar navbar-light header">
+        <div class="header__container">
+
+            <a class="navbar-brand header__logo" href="#">
+                <img src="img/logo/cityN.svg" alt="">
+            </a>
+
+            <a class="navbar-brand header__logo" href="#">
+                <img src="img/logo/z4z.svg" alt="">
+            </a>
+
+            <ul class="navbar-nav mr-auto flex-row header__link d-none d-md-flex">
+                <li class="nav-item header__item">
+                    <a class="" href="#">Главная</a>
+                </li>
+
+                <li class="nav-item header__item active">
+                    <a class="" data-toggle="collapse" data-target="#navbarHeader"
+                       aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation" href="#">Управление</a>
+                </li>
+
+                <li class="nav-item header__item">
+                    <a class="" href="#">Закупки</a>
+                </li>
+                <li class="nav-item header__item">
+                    <a class="disabled" href="#">О проекте</a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown header__dropdown__container">
+                    <a class="nav-link header__dropdown d-flex align-items-center" href="#" id="dropdown01"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img class="header__dropdown__logo" src="https://picsum.photos/50/50" alt="">
+                        <span class="d-none d-sm-block">Михаил Соломатин</span></a>
+                    <div class="dropdown-menu header__dropdown__menu" aria-labelledby="dropdown01">
+                        <a class="dropdown-item header__dropdown__menu__item" href="#">Категория 1</a>
+                        <a class="dropdown-item header__dropdown__menu__item" href="#">Категория 2</a>
+                        <a class="dropdown-item header__dropdown__menu__item" href="#">Категория 3</a>
+                        <a class="dropdown-item header__dropdown__menu__item" href="#">Категория 4</a>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="navbar navbar-light header d-block d-md-none">
+        <div class="header__container ">
+            <ul class="navbar-nav flex-row header__link d-flex">
+                <li class="nav-item header__item">
+                    <a class="" href="#">Главная</a>
+                </li>
+
+                <li class="nav-item header__item active">
+                    <a class="" data-toggle="collapse" data-target="#navbarHeader"
+                       aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation" href="#">Управление</a>
+                </li>
+
+                <li class="nav-item header__item">
+                    <a class="" href="#">Закупки</a>
+                </li>
+                <li class="nav-item header__item">
+                    <a class="disabled" href="#">О проекте</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="collapse header__sub collapse show" id="navbarHeader">
+        <div class="container admin_bar">
+            <ul class="navbar-nav d-inline-flex flex-row header__link">
+                <li class="nav-item header__item">
+                    <a class="" href="#">Пользователи</a>
+                </li>
+
+                <li class="nav-item header__item active">
+                    <a class="" href="#">Закупки</a>
+                </li>
+
+                <li class="nav-item header__item">
+                    <a class="" href="#">Закупки на модерации</a>
+                </li>
+                <li class="nav-item header__item">
+                    <a class="disabled" href="#">Перечни</a>
+                </li>
+            </ul>
+            <div class="search">
+                <div class="input_selector my-2"> <!--Добавить empty если ни один вариант не выбран-->
+                    <select>
+                        <option class="dropdown-item" value="0" disabled selected="selected" hidden>Выберите категорию
+                        </option>
+                        <option class="dropdown-item" value="1">Категория 1</option>
+                        <option class="dropdown-item" value="2">Категория 2</option>
+                        <option class="dropdown-item" value="3">Категория 3</option>
+                        <option class="dropdown-item" value="4">Категория 4</option>
+                    </select>
+                </div>
+                <span class="input_form notips search my-2">
+                    <input value="" placeholder="Поиск по закупкам">
+                </span>
+            </div>
+        </div>
+    </div>
+
+</header>
+
+<main role="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center my-5">
+                <h2>Вы пока не добавляли закупок.</h2>
+                <p>
+                    Добавьте закупку, после модерации <br>она появится на нашей площадке.
+                </p>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+                <button type="button" class="btn btn-main">Добавить закупку</button>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="footer__block_1">
+                <a class="navbar-brand header__logo" href="#">
+                    <img src="img/logo/z4z_white.svg" alt="">
+                </a>
+                <div class="footer__link">
+                    <a href="#">О проекте</a>
+                    <a href="#">Закупки</a>
+                    <a href="#">Контакты</a>
+                </div>
+                <p>119285, г. Москва, ул. Мосфильмовская, д. 40</p>
+                <p class="footer__sub_txt">© 2019, Проект ОНФ «За честные закупки»</p>
+                <hr>
+                <div class="footer__block_1__footer">
+                    <a href="#" class="pl-0 footer__sub_txt footer__policy">Политика конфиденциальности</a>
+                    <div class="footer__social">
+                        <a href="#">
+                            <img src="img/icons/social/facebook.svg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="img/icons/social/twitter.svg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="img/icons/social/vkontakte.svg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="img/icons/social/youtube.svg" alt="">
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer__block_2">
+                <p>+7 (495) 980-25-62</p>
+                <p class="footer__sub_txt">Телефон для СМИ</p>
+                <p>z4z@onf.ru</p>
+                <p class="footer__sub_txt">По вопросам работы сайта</p>
+                <button type="button" class="btn btn-main">Добавить закупку</button>
+                <div class="footer__logo">
+                    <div>Дизайн &mdash;<a href="#" class="footer__logo_1">Студия &#171;Бермуды&#187;</a></div>
+                    <div>Разработка &mdash;<a href="#" class="footer__logo_2">Solorum Group</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
