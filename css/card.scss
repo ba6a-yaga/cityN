@@ -4,23 +4,23 @@
   position: relative;
   width: 100%;
   border: 1px solid var(--border-gray);
-  &__account{
+  &__account {
     padding: 30px 30px;
-    @media(max-width: $xl){
+    @media(max-width: $xl) {
       padding: 30px 15px;
     }
-    h3{
+    h3 {
       white-space: nowrap;
     }
-    &__column{
-      @media(max-width: $xl){
+    &__column {
+      @media(max-width: $xl) {
         margin-bottom: 1rem;
       }
     }
   }
   &__tips {
     padding: 80px 30px 30px 30px;
-    p{
+    p {
       font-size: 12pt;
     }
     &:before {
@@ -209,6 +209,27 @@
     width: 100%;
     position: relative;
     //max-width: 345px;
+    &.active {
+      background-color: #e3edf0;
+      &.flag {
+        &:before {
+          @include fav('a7cbda');
+        }
+      }
+      .card__tag {
+        background-color: #ebf5f8;
+      }
+      .card__tag__monitor{
+        &:after {
+          @include eye('a7cbda');
+        }
+      }
+      .card__tag__edit{
+        &:after {
+          @include edit('a7cbda');
+        }
+      }
+    }
     &__header {
       font-weight: bold;
       font-size: 12pt;

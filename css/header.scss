@@ -4,14 +4,14 @@
   background-color: var(--white);
   height: 55px;
   padding: 0;
-  &__mobile_menu{
+  &__mobile_menu {
     padding: 10px 20px 10px 0px;
     cursor: pointer;
     display: none;
-    @media(max-width: $sm){
+    @media(max-width: $sm) {
       display: inline-block;
     }
-    img{
+    img {
       width: 30px;
       height: auto;
     }
@@ -39,6 +39,23 @@
       align-items: center;
       justify-content: start;
     }
+    .input_form {
+      min-width: 345px;
+      input {
+        height: 40px;
+      }
+    }
+    .input_selector {
+      min-width: 270px;
+      height: 40px;
+      &:after{
+        top: 17px;
+      }
+      select {
+        padding: 11px 10px 0px 11px;
+      }
+    }
+
   }
   &__logo {
     margin-right: 30px;
@@ -103,7 +120,7 @@
       content: "";
       @include dropdown('bdbdbd');
       @media (max-width: $md) {
-          display: none;
+        display: none;
       }
     }
     &__menu {
@@ -142,7 +159,7 @@
       border-radius: 50%;
       width: 32px;
       height: 32px;
-      @media(max-width: $sm){
+      @media(max-width: $sm) {
         margin-right: 0px;
       }
     }

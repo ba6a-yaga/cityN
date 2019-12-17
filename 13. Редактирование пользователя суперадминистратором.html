@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>12. Редактирование пользователя администратором</title>
+    <title>13. Редактирование пользователя суперадминистратором</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -196,6 +196,14 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-12 mt-3">
+                            <label class="checkbox_container">Права администратора
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -339,64 +347,5 @@
         </div>
     </div>
 </footer>
-<script>
-
-    function Dropdown(obj) {
-        var d = document.getElementById(obj);
-        var el = d.getElementsByClassName('card__list__item__content');
-        var g = el[0].getElementsByClassName('card__list__item__block');
-        if (d.classList.contains('active')) {
-            d.classList.remove('active');
-            el[0].setAttribute('style', 'height:0');
-        } else {
-            d.classList.add('active');
-            el[0].setAttribute('style', 'height:' + g[0].offsetHeight + 'px');
-        }
-    }
-
-    function txtInput(label, input) {
-        var de = document.getElementById(label);
-        var el = document.getElementById(input);
-        if (el !== null && el.value === "") {
-            de.classList.remove("full");
-        } else {
-            de.classList.add("full");
-        }
-    }
-
-    function selectInput(label, input) {
-        var de = document.getElementById(label);
-        var el = document.getElementById(input);
-        var strUser = el.options[el.selectedIndex].value;
-        console.log(typeof strUser);
-        console.log(strUser);
-        if (strUser === "0") {
-            de.classList.remove("full");
-            console.log(strUser + "notfull");
-        } else {
-            de.classList.add("full");
-            console.log(strUser + "full");
-        }
-    }
-
-
-    var textarea = document.querySelector('textarea');
-    textarea.addEventListener('keyup', function () {
-        if (this.scrollTop > 0) {
-            this.style.height = this.scrollHeight + "px";
-        }
-    });
-
-    document.addEventListener("DOMContentLoaded", txtInput('txt', 'inputTxt'));
-    document.addEventListener("DOMContentLoaded", txtInput('txt2', 'inputTxt2'));
-    document.addEventListener("DOMContentLoaded", txtInput('txt3', 'inputTxt3'));
-    document.addEventListener("DOMContentLoaded", txtInput('txt4', 'inputTxt4'));
-    document.addEventListener("DOMContentLoaded", txtInput('txtAlert', 'inputTxtAlert'));
-    document.addEventListener("DOMContentLoaded", txtInput('txtCalendar', 'txtInputCalendar'));
-    document.addEventListener("DOMContentLoaded", Dropdown('opens'));
-    document.addEventListener("DOMContentLoaded", Dropdown('opens2'));
-
-
-</script>
 </body>
 </html>
