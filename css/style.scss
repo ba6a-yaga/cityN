@@ -117,42 +117,49 @@ h2 {
 h3 {
   font-size: 12pt;
 }
-.account{
+
+.account {
   h2 {
     margin-bottom: 2rem;
   }
 }
-.admin_bar{
+
+.admin_bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  .search{
+  .search {
     display: flex;
     margin-left: auto;
-    .input_form{
-      margin-left: 2rem;
+    .input_form {
+      &:nth-child(even) {
+        margin-left: 2rem;
+      }
     }
   }
-  @media(max-width: $xl){
+  @media(max-width: $xl) {
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: start;
-    .search{
+    .search {
       margin-left: inherit;
       width: 100%;
     }
   }
-  @media(max-width: $md){
-    .search{
+  @media(max-width: $md) {
+    .search {
       flex-direction: column;
-      .input_form{
-        margin-left: 0rem;
+      .input_form {
+        &:nth-child(even) {
+          margin-left: 0rem;
+        }
       }
     }
   }
 }
+
 .clock {
   display: inline-block;
   height: 10pt;
