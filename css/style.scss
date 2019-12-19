@@ -423,7 +423,13 @@ h3 {
   color: #dadada;
   border: 1px dashed #dadada;
   padding: 40px 14px;
-  display: inline-block;
+  display: inline-flex;
+  width: 100%;
+  .tip{
+    margin: auto;
+    text-align: center;
+    max-width: 150px;
+  }
 }
 
 .photo {
@@ -498,5 +504,43 @@ h3 {
   }
   p {
     fony-size: 12pt;
+  }
+}
+
+.edit_mark {
+  display: inline-flex;
+  text-align: center;
+  font-weight: normal;
+  background-color: #3090bb;
+  padding: 5px 13px;
+  border-radius: 50px;
+  border: 3px solid #3090bb;
+  position: absolute;
+  white-space: nowrap;
+  color: #ffffff;
+  font-size: 12pt;
+  flex-direction: row;
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: -7px;
+    left: calc(50% - 5px);
+    transform: rotate(45deg);
+    background-color: #3090bb;
+    border-bottom: 3px solid #3090bb;
+    border-right: 3px solid #3090bb;
+  }
+  span{
+    margin: 0 5px;
+    cursor: pointer;
+    &:first-child{
+      margin-left: 0;
+    }
+    &:hover{
+      text-decoration: underline;
+    }
   }
 }

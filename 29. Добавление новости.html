@@ -114,56 +114,97 @@
         <div class="row mb-2">
             <button type="button" class="btn btn-third back mr-4">Назад</button>
         </div>
+        <h1 class="mb-4">Добавление новости</h1>
         <div class="row">
             <div class="col-12 col-lg-6 card__info__container">
-                <h2>1. Основная информация</h2>
-
+                <h2>Основная информация</h2>
                 <div class="card container card_add mb-5">
-
                     <div class="row">
                         <div class="col-12">
                             <div class="card__info fill">
-                                <h3>Ссылка на видеоролик</h3>
-                                <span class="input_form">
-                            <span class="label">YouTube.ru/</span>
-                            <input type="text" value="">
-                            <span class="sub_txt d-none">&emsp;</span>
-                        </span>
+                                <h3>Название новости</h3>
+                                <span class="input_form notips">
+                                    <input type="text" value="" placeholder="Не более 150 символов">
+                                    </span>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="card__info fill">
-                                <h3>Название видеоролика</h3>
-                                <span class="input_form">
-                            <span class="label">Не более 150 символов</span>
-                            <input type="text" value="">
-                            <span class="sub_txt d-none">&emsp;</span>
-                        </span>
+                                <h3>Фотопревью</h3>
+                                <div class="photo_load" style="min-height: 260px">
+                                    <div class="tip">
+                                        <p>Вы можете добавить фото объемом максимум 5 Мб. в формате .jpg или .png</p>
+                                        <a class="mt-1" href="#">Загрузить фото</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-12">
-                            <div class="card__info fill">
-                                <h3>Описание видеоролика</h3>
-                                <span class="input_form">
-                    <textarea class="empty transforming" style="height: 150px;"
-                              type="text">Не более 150 символов</textarea>
-                                    <!--Добавить empty если ни один вариант не выбран-->
-                    </span>
-
-                            </div>
-                        </div>
-
                     </div>
-
-
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-lg-6 card__info__container">
+                <h2>Раздел 1</h2>
+                <div class="card container card_add">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card__info fill">
+                                <h3>Заголовок раздела</h3>
+                                <span class="input_form notips">
+                                    <input type="text" value="" placeholder="Не более 150 символов">
+                                    </span>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="card__info fill">
+                                <h3>Основной текст</h3>
+                                <span class="input_form">
+                                    <div class="edit_mark" style="left:50px; top:40px">
+                                        <span>B</span>
+                                        <span>It</span>
+                                        <span>U</span>
+                                        <span>Ссылка</span>
+                                    </div>
+                                    <textarea class="transforming" style="height: 200px;" type="text">Первым объектом мониторинга стал город Шебекино Белгородской области. Население — 42,5 тыс. человек. С 1 января 2018 по июнь 2019 г., по данным информационных систем, состоялось закупок на сумму 2,6 млрд руб. с местом поставки город Шебекино и Шебекинский городской округ. Общее количество процедур — 4238 со средним процентом снижения на торгах 19,09%. Значительная доля процедур проходит с единственным участником.
+                                    </textarea>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="card__info fill">
+                                <h3>Фото- и видеоматериалы</h3>
 
+                                <div class="card__list__add_video">
+
+                                    <div class="media_list">
+                                        <div class="image">
+                                            <img src="https://picsum.photos/id/237/100/100" alt="">
+                                        </div>
+                                        <div class="video">
+                                            <img src="https://picsum.photos/id/227/100/100" alt="">
+                                        </div>
+                                        <div class="image_add"></div>
+                                    </div>
+
+                                    <span class="input_form notips input_link">
+                                        <input type="text" placeholder="Cсылка на YouToobe" value="">
+                                        <div class="add_button"></div>
+                                    </span>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row mt-5">
             <div class="col-12">
-                <button type="button" class="btn btn-main">Добавить видео</button>
-                <button type="button" class="btn btn-second ml-5">Отмена</button>
+                <button type="button" class="btn btn-main">Добавить новость</button>
+                <button type="button" class="btn btn-second ml-5">Удалить</button>
             </div>
         </div>
     </div>
