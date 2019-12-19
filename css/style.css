@@ -1996,4 +1996,21 @@ h3 {
       flex-direction: column;
       align-items: start; } }
 
+.error {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  max-width: 500px;
+  text-align: center; }
+  .error .code {
+    font-weight: bold;
+    font-size: 150pt;
+    color: var(--gray); }
+  .error h2 {
+    font-size: 16pt; }
+  .error p {
+    fony-size: 12pt; }
+
 /*# sourceMappingURL=style.css.map */
