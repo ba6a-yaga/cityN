@@ -217,12 +217,6 @@
       .card__name {
         color: var(--black);
       }
-      .edit{
-        display: none;
-      }
-      .delete{
-        display: none;
-      }
       &.active {
         .edit {
           display: inline-block;
@@ -234,8 +228,13 @@
           right: 50px;
           @include edit('bdbdbd');
           cursor: pointer;
+          transition-duration: 300ms;
+          transition-timing-function: ease-out;
           &:hover {
             @include edit('3090bb');
+            transition-duration: 300ms;
+            transition-timing-function: ease-out;
+            transform: scale(1.1);
           }
         }
         .delete {
@@ -246,10 +245,15 @@
           height: 20px;
           top: 20px;
           right: 20px;
+          transition-duration: 300ms;
+          transition-timing-function: ease-out;
           @include delete('bdbdbd');
           cursor: pointer;
           &:hover {
-            @include delete('3090bb');
+            @include delete('cf1314');
+            transition-duration: 300ms;
+            transition-timing-function: ease-out;
+            transform: scale(1.1);
           }
         }
       }
@@ -337,9 +341,171 @@
       display: flex;
       justify-content: space-between;
       flex-direction: column;
-      &:last-child {
-        .card__list__item__header {
+      position: relative;
+      margin-top: -1px;
+      &.active{
+        .card__list__item__header{
+          border: 1px solid var(--blue) !important
+        }
+      }
+      & > .card__list__item__content {
+        .card__list__item__object {
+          &:first-child {
+            &:hover, &.active {
+              border-top: 1px solid transparent;
+            }
+          }
+          &:last-child {
+            &:hover, &.active {
+              // border-bottom: 1px solid transparent;
+            }
+          }
+        }
+      }
+      &__object {
+        border: 1px solid transparent;
+        width: 100%;
+        font-weight: bold;
+        padding: 25px 130px 25px 30px;
+        cursor: pointer;
+        transition-duration: 300ms;
+        background-color: transparent;
+        margin-bottom: -1px;
+        position: relative;
+        &:hover {
+          border: 1px solid var(--blue);
+          background-color: var(--background_blue);
+          transition-duration: 300ms;
+
+        }
+        &.active {
+          border: 1px solid var(--blue);
+          transition-duration: 300ms;
+        }
+        & > .add {
+          display: inline-block;
+          position: absolute;
+          content: '';
+          width: 20px;
+          height: 20px;
+          top: 22px;
+          right: 100px;
+          @include add_mark('bdbdbd');
+          cursor: pointer;
+          transition-duration: 300ms;
+          transition-timing-function: ease-out;
+          &:hover {
+            @include add_mark('3090bb');
+            transition-duration: 300ms;
+            transition-timing-function: ease-out;
+            transform: scale(1.1);
+          }
+        }
+        & > .edit {
+          display: inline-block;
+          position: absolute;
+          content: '';
+          width: 20px;
+          height: 20px;
+          top: 22px;
+          right: 60px;
+          @include edit('bdbdbd');
+          cursor: pointer;
+          transition-duration: 300ms;
+          transition-timing-function: ease-out;
+          &:hover {
+            @include edit('3090bb');
+            transition-duration: 300ms;
+            transition-timing-function: ease-out;
+            transform: scale(1.1);
+          }
+        }
+        & > .delete {
+          display: inline-block;
+          position: absolute;
+          content: '';
+          width: 20px;
+          height: 20px;
+          top: 22px;
+          right: 20px;
+          transition-duration: 300ms;
+          transition-timing-function: ease-out;
+          @include delete('bdbdbd');
+          cursor: pointer;
+          &:hover {
+            @include delete('cf1314');
+            transition-duration: 300ms;
+            transition-timing-function: ease-out;
+            transform: scale(1.1);
+          }
+        }
+        input {
           border: none;
+          background-color: transparent;
+          width: 100%;
+        }
+      }
+      & > .edit {
+        display: inline-block;
+        position: absolute;
+        content: '';
+        width: 20px;
+        height: 20px;
+        top: 22px;
+        right: 100px;
+        @include edit('bdbdbd');
+        cursor: pointer;
+        transition-duration: 300ms;
+        transition-timing-function: ease-out;
+        &:hover {
+          @include edit('3090bb');
+          transition-duration: 300ms;
+          transition-timing-function: ease-out;
+          transform: scale(1.1);
+        }
+      }
+      & > .delete {
+        display: inline-block;
+        position: absolute;
+        content: '';
+        width: 20px;
+        height: 20px;
+        top: 22px;
+        right: 60px;
+        transition-duration: 300ms;
+        transition-timing-function: ease-out;
+        @include delete('bdbdbd');
+        cursor: pointer;
+        &:hover {
+          @include delete('cf1314');
+          transition-duration: 300ms;
+          transition-timing-function: ease-out;
+          transform: scale(1.1);
+        }
+      }
+
+      &:first-child {
+        &.active {
+          .card__list__item__header {
+            border-radius: 20px 20px 0 0;
+          }
+        }
+      }
+      &:last-child {
+        .card__list__item__content {
+          .object_list {
+            .card__list__item__object {
+              &:last-child {
+                border-radius: 0 0 20px 20px;
+                &:hover {
+                  border-bottom: 1px solid var(--blue);
+                }
+              }
+            }
+          }
+        }
+        .card__list__item__header {
+          border-bottom: 1px solid transparent;
         }
       }
       &__header {
@@ -349,9 +515,15 @@
         width: 100%;
         align-items: center;
         font-weight: bold;
+        border-top: 1px solid transparent;
         border-bottom: 1px solid #dadada;
+        border-left: 1px solid transparent;
+        border-right: 1px solid transparent;
         padding: 22px 5px 27px 27px;
         cursor: pointer;
+        input {
+          border: none;
+        }
       }
       .arrow {
         content: url("../img/icons/dropdown.svg");
@@ -361,15 +533,74 @@
         line-height: 1;
         margin-right: 20px;
         transition-duration: 300ms;
+        transition-timing-function: ease-out;
       }
       &__content {
         overflow: hidden;
         width: 100%;
         height: 0;
-        padding: 0 30px;
         transition-duration: 300ms;
+        transition-timing-function: ease-out;
+        .card__list__item__comment {
+          padding: 0 30px;
+        }
+        .card__list__item__comment__add {
+          padding: 0 30px;
+        }
       }
       &__block {
+        &.object_list {
+          &.single_list {
+            .edit{
+              right: 20px;
+            }
+            .card__list__item__object {
+              position: relative;
+              &.active{
+                .edit{
+                  display: none;
+                }
+                .yes, .no {
+                  display: inline-block;
+                  position: absolute;
+                  width: 17px;
+                  height: 17px;
+                  cursor: pointer;
+                  transition-duration: 300ms;
+                  transition-timing-function: ease-out;
+                  &:hover {
+                    transform: scale(1.2);
+                    transition-duration: 300ms;
+                    transition-timing-function: ease-out;
+                  }
+                }
+                .yes {
+                  top: 30px;
+                  width: 17px;
+                  height: 17px;
+                  right: 65px;
+                  @include check('00983a');
+                }
+                .no {
+                  top: 30px;
+                  width: 12px;
+                  right: 25px;
+                  @include close('e32118');
+                }
+              }
+              &:first-child {
+                border-radius: 20px 20px 0 0;
+              }
+              &:last-child {
+                border-radius: 0 0 20px 20px;
+              }
+            }
+          }
+        }
+        &.object_list {
+          padding: 0;
+        }
+        padding-top: 10px;
         padding-bottom: 10px;
         .checkbox_container {
           margin: 0px 0px 10px 60px;
@@ -486,9 +717,11 @@
               content: "";
               @include video('3090bb');
               transition-duration: 300ms;
+              transition-timing-function: ease-out;
               &:hover {
                 transform: scale(1.1);
                 transition-duration: 300ms;
+                transition-timing-function: ease-out;
               }
             }
             .images {
@@ -500,9 +733,11 @@
               content: "";
               @include image('3090bb');
               transition-duration: 300ms;
+              transition-timing-function: ease-out;
               &:hover {
                 transform: scale(1.1);
                 transition-duration: 300ms;
+                transition-timing-function: ease-out;
               }
             }
           }
@@ -587,9 +822,9 @@
           display: inline-flex;
           flex-direction: column;
           &.edit {
+            display: block;
             background-color: #ffffff;
             border-color: var(--blue);
-
             .card__list__item__comment__attach {
               .image, .video {
                 &:hover {
@@ -604,7 +839,6 @@
                     left: 0;
                     top: 0;
                     border-radius: 10px;
-
                   }
                   &:after {
                     height: 18px;
@@ -634,9 +868,11 @@
                 cursor: pointer;
                 position: relative;
                 transition-duration: 300ms;
+                transition-timing-function: ease-out;
                 &:hover {
                   transform: scale(1.1);
                   transition-duration: 300ms;
+                  transition-timing-function: ease-out;
                   &:after {
                     top: 8px;
                   }
@@ -655,11 +891,10 @@
             }
           }
           &.delete {
+            display: block;
             background-color: #ffffff;
             border-color: var(--red);
-
           }
-
           .edit_text {
             border: none;
             background-color: transparent;
@@ -675,7 +910,6 @@
               border-radius: 10px;
             }
           }
-
           &__delete {
             width: 15px;
             height: 15px;
@@ -684,10 +918,13 @@
             @include delete('dbdbdb');
             display: inline-block;
             transition-duration: 300ms;
+            transition-timing-function: ease-out;
             cursor: pointer;
             &:hover {
+              @include delete('cf1314');
               transform: scale(1.2);
               transition-duration: 300ms;
+              transition-timing-function: ease-out;
             }
             &.active {
               @include delete('e32118');
@@ -701,10 +938,12 @@
             @include edit('bdbdbd');
             display: inline-block;
             transition-duration: 300ms;
+            transition-timing-function: ease-out;
             cursor: pointer;
             &:hover {
               transform: scale(1.2);
               transition-duration: 300ms;
+              transition-timing-function: ease-out;
             }
             &.active {
               display: none !important;
@@ -726,9 +965,11 @@
               height: 17px;
               cursor: pointer;
               transition-duration: 300ms;
+              transition-timing-function: ease-out;
               &:hover {
                 transform: scale(1.2);
                 transition-duration: 300ms;
+                transition-timing-function: ease-out;
               }
             }
             .yes {
@@ -761,9 +1002,11 @@
           transform: rotate(180deg);
           line-height: .8;
           transition-duration: 300ms;
+          transition-timing-function: ease-out;
         }
         .card__list__item__content {
           transition-duration: 300ms;
+          transition-timing-function: ease-out;
         }
       }
     }

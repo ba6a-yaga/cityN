@@ -48,7 +48,7 @@
     .input_selector {
       min-width: 270px;
       height: 40px;
-      &:after{
+      &:after {
         top: 17px;
       }
       select {
@@ -71,7 +71,7 @@
     white-space: nowrap;
     &.active {
       a {
-        color: $red !important;
+        color: var(--red) !important;
       }
     }
   }
@@ -91,8 +91,9 @@
   &__dropdown {
     padding: 0 13px;
     font-size: 14pt;
-    color: $blue !important;
+    color: var(--blue) !important;
     transition-duration: 300ms;
+    transition-timing-function: ease-out;
     &__container {
       height: 100%;
       align-content: center;
@@ -103,14 +104,16 @@
       }
     }
     &:hover {
-      color: $blue !important;
+      color: var(--blue) !important;
       text-decoration: underline;
       transition-duration: 300ms;
+      transition-timing-function: ease-out;
     }
     &:active {
-      color: $dark_blue !important;
+      color: var(--dark_blue) !important;
       text-decoration: underline;
       transition-duration: 300ms;
+      transition-timing-function: ease-out;
     }
     &:after {
       display: inline-block;
@@ -136,11 +139,13 @@
         border-bottom: 1px solid #ffffff;
         border-top: 1px solid #ffffff;
         transition-duration: 300ms;
+        transition-timing-function: ease-out;
         &:hover {
-          background-color: #edf6f9;
+          background-color: var(--background_blue);
           border-bottom: 1px solid #dadada;
           border-top: 1px solid #dadada;
           transition-duration: 300ms;
+          transition-timing-function: ease-out;
         }
         &:active {
           color: var(--black);

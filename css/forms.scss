@@ -3,7 +3,7 @@
   margin: 0;
   display: inline-block;
   width: 100%;
-  &.search{
+  &.search {
     &:after {
       cursor: pointer;
       position: absolute;
@@ -16,30 +16,30 @@
       display: inline-block;
     }
   }
-  &.notips{
+  &.notips {
     input, textarea {
       padding: 13px;
     }
   }
-  &__work{
+  &__work {
     padding-right: 40px;
     margin: 10px 0;
-    &:after{
+    &:after {
       content: '';
       width: 30px;
       height: 30px;
       display: inline-block;
       position: absolute;
-      top:13px;
+      top: 13px;
       right: 0;
       cursor: pointer;
     }
-    &.delete{
+    &.delete {
       &:after {
         @include delete(bdbdbd);
       }
     }
-    &.add{
+    &.add {
       &:after {
         @include add_mark(bdbdbd);
       }
@@ -54,14 +54,17 @@
     height: 60px;
     font-size: 12pt;
     transition-duration: 300ms;
+    transition-timing-function: ease-out;
     &:focus {
       border: 1px solid #3bb6e6;
       outline: none;
       transition-duration: 300ms;
+      transition-timing-function: ease-out;
     }
     &:invalid {
       border: 1px solid var(--red);
       transition-duration: 300ms;
+      transition-timing-function: ease-out;
       box-shadow: none;
     }
     &.empty {
@@ -70,9 +73,10 @@
       &:focus {
         color: var(--blue);
         transition-duration: 300ms;
+        transition-timing-function: ease-out;
       }
     }
-    &::placeholder{
+    &::placeholder {
       color: #b9b9b9;
     }
   }
@@ -84,6 +88,7 @@
     .label {
       color: var(--blue);
       transition-duration: 300ms;
+      transition-timing-function: ease-out;
       font-size: 8pt;
       top: 10px;
     }
@@ -92,6 +97,7 @@
     position: absolute;
     color: var(--gray);
     transition-duration: 300ms;
+    transition-timing-function: ease-out;
     left: 13px;
     font-size: 10pt;
     top: 22px;
@@ -99,6 +105,7 @@
   .full {
     color: var(--gray);
     transition-duration: 300ms;
+    transition-timing-function: ease-out;
     font-size: 8pt;
     top: 10px;
   }
@@ -157,16 +164,18 @@
   display: inline-block;
   width: 100%;
   transition-duration: 300ms;
+  transition-timing-function: ease-out;
   border: 1px solid #dadada;
   border-radius: 20px;
   background-color: #ffffff;
   font-size: 12pt;
   padding: 0;
-  height: 60px;
+  max-height: 60px;
   &:hover,
   &:focus {
     border: 1px solid #3bb6e6;
     transition-duration: 300ms;
+    transition-timing-function: ease-out;
   }
 
   &:after {
@@ -199,14 +208,16 @@
     -moz-appearance: none;
     appearance: none;
     transition-duration: 300ms;
+    transition-timing-function: ease-out;
 
   }
   option {
     &:hover {
-      background-color: #edf6f9;
+      background-color: var(--background_blue);
       border-bottom: 1px solid #dadada;
       border-top: 1px solid #dadada;
       transition-duration: 300ms;
+      transition-timing-function: ease-out;
     }
   }
   &:focus {
@@ -214,6 +225,7 @@
   }
 
 }
+
 .input_selector.disabled,
 .disabled .input_selector {
   background-color: var(--gray);
@@ -227,6 +239,7 @@
     color: #999;
   }
 }
+
 .inputList {
   align-items: center;
   &:first-child {
@@ -238,11 +251,12 @@
   .input_form {
     max-width: 290px;
     width: 100%;
-    @media(max-width: $md){
+    @media(max-width: $md) {
       max-width: none;
     }
   }
 }
+
 .empty {
   select {
     color: var(--gray);
@@ -250,22 +264,24 @@
     &:hover {
       color: var(--blue);
       transition-duration: 300ms;
+      transition-timing-function: ease-out;
     }
   }
 
 }
+
 .disable {
-  &:hover{
+  &:hover {
     border-color: var(--border-gray);
     color: var(--gray);
   }
   input {
     background-color: var(--middle_gray);
   }
-  select{
+  select {
     color: var(--gray);
     background-color: var(--middle_gray);
-    &:hover{
+    &:hover {
       border-color: var(--border-gray);
       color: var(--gray);
     }
