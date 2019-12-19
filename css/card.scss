@@ -45,7 +45,7 @@
       cursor: pointer;
     }
   }
-  &.add {
+  &.card_add {
     padding: 23px 30px;
   }
   &__info {
@@ -89,6 +89,11 @@
   }
   &__registration {
     &__content {
+      h2{
+        text-align: left;
+        font-size: 10pt;
+        font-weight: normal;
+      }
       padding: 30px 30px;
       text-align: center;
       .personal {
@@ -326,6 +331,9 @@
     }
   }
   &__news {
+    &__header{
+      padding: 0px 20px;
+    }
     padding: 20px;
     width: 100%;
     //max-width: 345px;

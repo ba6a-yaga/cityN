@@ -110,7 +110,9 @@ h3 {
 .yes, .no, .add, .edit, .delete {
   display: none;
 }
-
+.transforming{
+  resize: vertical !important;
+}
 .account {
   h2 {
     margin-bottom: 2rem;

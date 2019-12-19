@@ -562,7 +562,7 @@
       background-size: contain;
       background-repeat: no-repeat;
       cursor: pointer; }
-  .card.add {
+  .card.card_add {
     padding: 23px 30px; }
   .card__info {
     padding: 23px 30px 23px 30px;
@@ -596,6 +596,10 @@
     .card__registration__content {
       padding: 30px 30px;
       text-align: center; }
+      .card__registration__content h2 {
+        text-align: left;
+        font-size: 10pt;
+        font-weight: normal; }
       .card__registration__content .personal {
         color: var(--gray);
         font-size: 10pt;
@@ -789,6 +793,8 @@
     display: flex;
     flex-direction: column;
     justify-content: start; }
+    .card__news__header {
+      padding: 0px 20px; }
   .card__list {
     padding: 0;
     width: 100%; }
@@ -1683,6 +1689,9 @@ h3 {
 
 .yes, .no, .add, .edit, .delete {
   display: none; }
+
+.transforming {
+  resize: vertical !important; }
 
 .account h2 {
   margin-bottom: 2rem; }
