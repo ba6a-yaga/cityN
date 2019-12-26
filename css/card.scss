@@ -57,6 +57,9 @@
         white-space: nowrap;
       }
       padding: 15px 0;
+      .delete, .add{
+        display: inline-block;
+      }
     }
     &__container {
       h1 {

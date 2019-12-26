@@ -574,6 +574,8 @@
         margin-bottom: 10px;
         font-size: 11pt;
         white-space: nowrap; }
+      .card__info.fill .delete, .card__info.fill .add {
+        display: inline-block; }
     .card__info__container h1 {
       margin-bottom: 53px; }
     .card__info__container h2 {
